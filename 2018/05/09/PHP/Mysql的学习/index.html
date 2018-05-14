@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mysql学习 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="一、阶段分三个阶段1.基础阶段：基本操作（增删改查）2.优化阶段：高级用法、索引、分表3.部署阶段：搭建服务器，如服务器集群、负载均衡 二、数据库1.数据库：高效存储和处理数据的介质（介质：磁盘和内存） 2.数据库的分类：数据库基于存储介质的不同：进行了分类：关系型数据库（SQL）和非关系型数据库（NoSql: Not Only SQL） 3.关系型数据库：  大型： Oracle,DB2 中型：">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql学习">
+<meta property="og:url" content="https://jqhee.github.io/2018/05/09/PHP/Mysql的学习/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="一、阶段分三个阶段1.基础阶段：基本操作（增删改查）2.优化阶段：高级用法、索引、分表3.部署阶段：搭建服务器，如服务器集群、负载均衡 二、数据库1.数据库：高效存储和处理数据的介质（介质：磁盘和内存） 2.数据库的分类：数据库基于存储介质的不同：进行了分类：关系型数据库（SQL）和非关系型数据库（NoSql: Not Only SQL） 3.关系型数据库：  大型： Oracle,DB2 中型：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-14T02:27:01.491Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mysql学习">
+<meta name="twitter:description" content="一、阶段分三个阶段1.基础阶段：基本操作（增删改查）2.优化阶段：高级用法、索引、分表3.部署阶段：搭建服务器，如服务器集群、负载均衡 二、数据库1.数据库：高效存储和处理数据的介质（介质：磁盘和内存） 2.数据库的分类：数据库基于存储介质的不同：进行了分类：关系型数据库（SQL）和非关系型数据库（NoSql: Not Only SQL） 3.关系型数据库：  大型： Oracle,DB2 中型：">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/Mysql的学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Mysql学习
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-05-09
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、阶段"><a href="#一、阶段" class="headerlink" title="一、阶段"></a>一、阶段</h1><p>分三个阶段<br>1.基础阶段：基本操作（增删改查）<br>2.优化阶段：高级用法、索引、分表<br>3.部署阶段：搭建服务器，如服务器集群、负载均衡</p>
+<h1 id="二、数据库"><a href="#二、数据库" class="headerlink" title="二、数据库"></a>二、数据库</h1><p>1.数据库：高效存储和处理数据的介质（介质：磁盘和内存）</p>
+<p>2.数据库的分类：<br>数据库基于存储介质的不同：进行了分类：关系型数据库（SQL）和非关系型数据库（NoSql: Not Only SQL）</p>
+<p>3.关系型数据库：</p>
+<ul>
+<li>大型： Oracle,DB2</li>
+<li>中型： SQL-SERVER,Mysql等</li>
+<li>小型： access等</li>
+</ul>
+<p>关系型数据库：memcached, mongodb, redis(同步到磁盘)</p>
+<p>4.两种数据库阵营的区别？<br>关系型数据库：安全（保存磁盘基本不可能丢失），容易理解，比较浪费空间（二维表）<br>非关系型数据库： 效率高（运行在内存中）、不安全（断电丢失）</p>
+<h1 id="三、关系型数据库"><a href="#三、关系型数据库" class="headerlink" title="三、关系型数据库"></a>三、关系型数据库</h1><p>1.什么是关系型数据库？<br>关系型数据库：是一种建立在关系模式（数学模型）上的数据库。<br>关系模式： 一种所谓建立在关系上的模型。<br>关系模型包含三个方面：</p>
+<ul>
+<li>数据结构： 数据存储的问题，二维表（有行有列）</li>
+<li>操作指令集合：所有SQL语句</li>
+<li>完整性约束： 表内数据约束（字段与字段），表与表之间约束（外键）</li>
+</ul>
+<p>2.关系型数据库的设计？<br>关系型数据库：从需要存储的数据需求中分析，如果是一类数据（<em>实体</em>）应该设计成一张二维表：<br>表由表头（字段名：用来规定数据名字）和数据部分组成（实际存储的数据单元）。</p>
+<p>以实际案例来处理：分析一个教学系统，讲师负责教学，教学生，在教室教学生<br>a.找出系统中存在的实体：讲师表、学生表、班级表<br>b.找出实体中应存在的数据信息：</p>
+<ul>
+<li>讲师：姓名，性别，年龄，工资</li>
+<li>学生：姓名，性别，学号，学科</li>
+<li>班级：班级名字，教室编号</li>
+</ul>
+<p>关系型数据库：维护实体内部，实体与实体之间的联系<br>实体内部联系：每个学生都有姓名，性别，学号，学科信息</p>
+<p><strong>学生表</strong><br>| 姓名 | 性别 | 学号 | 学科 | 年龄|<br>| - | - | - | - | - |<br>| 陈明 | 男 |it-0001 | php | 20 |<br>| 陈一 | 男 |it-0002 | php | 20 |<br>| 陈二 |  |it-0003 | php |  |</p>
+<p>第二行的所有字段，都是在描述陈明这个学生（内部联系）；第二列只能放性别（内部约束）</p>
+<p>关系型数据库特点之一： 如果表中对应的某个字段没有值（数据），但是系统依然要分配空间：关系型数据库比较浪费<br>实体与实体之间的联系：每个学生肯定属于某个班级，每一个班一定有多个学生（一对多）</p>
+<p><strong>学生表</strong><br>| 姓名 | 性别 | 学号 | 学科 | 年龄|<br>| - | - | - | - | - |<br>| 陈明 | 男 |it-0001 | php | 20 |<br>| 陈一 | 男 |it-0002 | php | 20 |<br>| 陈二 |  |it-0003 | php |  |</p>
+<p><strong>班级表</strong><br>| 班级名称 | 班级编号 |<br>| - | - |<br>| php一班 | 001 |<br>| php二班 | 002 |<br>| php三班 | 003 |</p>
+<p>解决方案：在学生表中增加一个班级字段来指向班级（必须能够唯一的找到一个班级的信息）<br>| 姓名 | 性别 | 学号 | 学科 | 年龄| 班级名称 |<br>| - | - | - | - | - | - |<br>| 陈明 | 男 |it-0001 | php | 20 | php一班 |<br>| 陈一 | 男 |it-0002 | php | 20 | php二班 |<br>| 陈二 |  |it-0003 | php |  | php三班 |<br>学生实体与班级实体的关联关系：实体与实体之间的关系</p>
+<h1 id="四、关键字说明"><a href="#四、关键字说明" class="headerlink" title="四、关键字说明"></a>四、关键字说明</h1><p>数据库：database<br>数据库系统：DBS(Database System),是一种虚拟系统，将多种内容关联起来的称呼<br>DBS = DBMS + DB<br>DBMS: Database Management System,数据库管理系统，专门管理数据库<br>DBA: Database Administrator,数据库管理员</p>
+<p>行/记录：row/record 本质是一个东西：都是指表中的一行（一条记录），行是结构角度出发，记录是从数据角度出发<br>列/字段：column/field 本质是一个东西</p>
+<h1 id="五、操作指令集合SQL"><a href="#五、操作指令集合SQL" class="headerlink" title="五、操作指令集合SQL"></a>五、操作指令集合SQL</h1><p>SQL: structured Query Language,结构化查询语言（数据以查询为主）<br>SQL分为三个部分：</p>
+<ul>
+<li>DDL: Data Definition Language,数据定义语言，用来维护存储数据的结构（数据库、表），代表指令create，drop，alter等</li>
+<li>DML: Data manipulation Language,数据库操作语言，用来对数据进行操作（数据表中的内容），代表指令：insert,delete,update等，其中DML内部又单独进行了一个分类 <em>DQL</em>（Data Query Language: 数据查询语言，如：select）</li>
+<li>DCL: Data Control Language,数据控制语言，主要是负责权限管理（用户），代表指令：grant,revoke等</li>
+</ul>
+<p>SQL是关系型数据库的操作指令，SQL是一种约束，但不强制（类似W3C）不同的数据库产品（如：Oracle,Mysql）可能内部会有一些细微的区别。</p>
+<h1 id="六、Mysql数据库"><a href="#六、Mysql数据库" class="headerlink" title="六、Mysql数据库"></a>六、Mysql数据库</h1><p>Mysql数据库是一种c/s结构软件：客户端/服务端，若想访问服务器必须通过客户端（服务器一直运行，客户端在需要使用的时候运行）</p>
+<p>交换方式：</p>
+<ul>
+<li>1.客户端</li>
+<li>2.客户端发送SQ指令</li>
+<li><p>3.服务端接收SQL指令，处理SQL指令，返回操作结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.exe -hlocalhost -P3306 -uroot  -p</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>4.客户端接收结果：显示结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases; -- 查看所有数据库</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>5.断开连接（释放资源，服务器并发限制）exit/quit/\q</p>
+</li>
+</ul>
+<h4 id="1-新增数据库"><a href="#1-新增数据库" class="headerlink" title="1.新增数据库"></a>1.新增数据库</h4><p>基本语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名字[库选项]</span><br><span class="line">库选项：用来约束数据库，分为两个选项</span><br><span class="line">字符集设定：charset/character set 具体字符集（数据存储的编码方式）常见的字符集 GBK 和UTF8</span><br><span class="line">校对集设定：collate 具体校对集（数据的比较规则）</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 创建一个数据库 数据库名称不能用关键字或者保留字，如果非要使用则需添加反引号</span><br><span class="line"></span><br><span class="line">-- 双中划线 + 空格：注释（单行注释），也可以使用#号</span><br><span class="line">-- 创建数据库</span><br><span class="line">create database mydatabase charset utf8;</span><br><span class="line"></span><br><span class="line">-- 创建数据库，使用反引号</span><br><span class="line">create database `database` charset utf8;</span><br></pre></td></tr></table></figure>
+<h4 id="2-查看数据库"><a href="#2-查看数据库" class="headerlink" title="2.查看数据库"></a>2.查看数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-- 查看所有数据库</span><br><span class="line">show databases;</span><br><span class="line"></span><br><span class="line">-- 模糊查询</span><br><span class="line">-- %:表示匹配多个字符</span><br><span class="line">-- _:表示匹配单个字符</span><br><span class="line">show database like &apos;pattern\_%&apos;;</span><br><span class="line"></span><br><span class="line">-- 查看数据库的创建语句</span><br><span class="line">show create database mydatabase;</span><br></pre></td></tr></table></figure>
+<h4 id="3-更新数据库"><a href="#3-更新数据库" class="headerlink" title="3.更新数据库"></a>3.更新数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 数据库名字不可以修改</span><br><span class="line">-- 数据库的修改仅限库选项：字符集和校对集</span><br><span class="line">alter database 数据库名字 [库选项]</span><br></pre></td></tr></table></figure>
+<h4 id="4-删除数据库"><a href="#4-删除数据库" class="headerlink" title="4.删除数据库"></a>4.删除数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 数据库名字;</span><br></pre></td></tr></table></figure>
+<h1 id="七、表操作"><a href="#七、表操作" class="headerlink" title="七、表操作"></a>七、表操作</h1><h4 id="1-新增数据表next-gt-13"><a href="#1-新增数据表next-gt-13" class="headerlink" title="1.新增数据表next -&gt; 13"></a>1.新增数据表next -&gt; 13</h4><p>– 先进入数据环境<br><em>use 数据库名字;</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table [if not exists] 表名（</span><br><span class="line">  字段名 数据类型,</span><br><span class="line">  字段名 数据类型 -- 最后一行不需要逗号</span><br><span class="line">)[表选项]</span><br><span class="line">表选项： 控制表的表现</span><br><span class="line">  - 字符集：charset/character set具体字符集 -- 保证表中数据存储的字符集</span><br><span class="line">  - 校对集：collate 具体校对集</span><br><span class="line">  - 存储引擎：engine具体的存储引擎（innodb 和myisam）</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 创建一个表</span><br><span class="line">create table if not exists student (</span><br><span class="line">name varchar(10),</span><br><span class="line">gender varchar(10),</span><br><span class="line">number varchar(10),</span><br><span class="line">age int,</span><br><span class="line">) charset uft8;</span><br></pre></td></tr></table></figure>
+<p>主键<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-- 增加主键</span><br><span class="line">create table my_pril(</span><br><span class="line">name varchar(20) not null comment &apos;姓名&apos;,</span><br><span class="line">number varchar(10) primary key comment &apos;学号：number + 0000&apos;</span><br><span class="line">)charset utf8;</span><br><span class="line"></span><br><span class="line">-- 复合主键</span><br><span class="line">create table my_pril2(</span><br><span class="line">number varchar(10) comment &apos;学号：number + 0000&apos;,</span><br><span class="line">courese char(10) comment &apos;课程代码：&apos;,</span><br><span class="line">score tinyint unsigned default 60 comment &apos;成绩&apos;</span><br><span class="line">primary key(number, courese)</span><br><span class="line">)charset utf8;</span><br><span class="line"></span><br><span class="line">-- 当前已经创建之后，在额外追加主键</span><br><span class="line">Alter table 表名 modify course char(10) primary key comment &apos;&apos;;</span><br><span class="line">Alter table 表名 add primary key(course);</span><br><span class="line"></span><br><span class="line">-- 删除主键</span><br><span class="line">alter table 表名 drop primary key;</span><br></pre></td></tr></table></figure></p>
+<p>自动增长<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-- 自增长特点： auto_increment</span><br><span class="line">1.任何一个字段要做自增长必须前提是本身的一个索引（key一栏有值）</span><br><span class="line">2.自增长字段必须是数字（整型）</span><br><span class="line">3.一张表最大只有一个</span><br><span class="line">create table my_auto (</span><br><span class="line">id  int primary key auto_increment comment &apos;自动增长&apos;,</span><br><span class="line">name varchar(10) comment &apos;名称&apos;</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p>唯一键(unique)：约束内容唯一<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Persons(</span><br><span class="line">Id_P int NOT NULL,</span><br><span class="line">LastName varchar(255) NOT NULL,</span><br><span class="line">FirstName varchar(255),</span><br><span class="line">Address varchar(255),</span><br><span class="line">City varchar(255),</span><br><span class="line">UNIQUE (Id_P)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<h1 id="八、事务"><a href="#八、事务" class="headerlink" title="八、事务"></a>八、事务</h1><h4 id="1-手动开启事务"><a href="#1-手动开启事务" class="headerlink" title="1.手动开启事务"></a>1.手动开启事务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">start transaction;</span><br><span class="line">commit;</span><br><span class="line">rollback;</span><br></pre></td></tr></table></figure>
+<h4 id="2-自动事务处理"><a href="#2-自动事务处理" class="headerlink" title="2.自动事务处理"></a>2.自动事务处理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;autocommit&apos;;</span><br><span class="line">-- 关闭自动事务</span><br><span class="line">set autocommit = 0;</span><br></pre></td></tr></table></figure>
+<h1 id="九、连接查询"><a href="#九、连接查询" class="headerlink" title="九、连接查询"></a>九、连接查询</h1><p>连接查询：join 使用方式：左表 join 右表</p>
+<h4 id="1-交叉连接-应该避免使用"><a href="#1-交叉连接-应该避免使用" class="headerlink" title="1.交叉连接(应该避免使用)"></a>1.交叉连接(应该避免使用)</h4><p>交叉连接： cross join 从一张表中循环取出每一条记录，每条记录都去另外一张表匹配：匹配一定保留（没有条件匹配），而连接本身字段就会增加（保留），最终形成的结果叫做：迪卡尔积（没有实际意义，实际上用不到）。<br>基本语法：左表 cross join 右表; ===== from 左表，右表；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from my_student cross join my_class;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-内连接（常用"><a href="#2-内连接（常用" class="headerlink" title="2.内连接（常用)"></a>2.内连接（常用)</h4><p>内连接：[inner] join, 从左表中取出一条记录，去右表中与所有记录进行匹配；<br>匹配是某个条件在左表中与右表中相同才会保留结果，否则不保留。<br>基本语法：[inenr] join 右表 on 左表.字段 = 右表.字段；on 表示连接条件：条件字段就是代表相同的业务含义（如：my_student.c_id 和 my_class.id）<br>内连接可以没有连接条件：没有on之后的内容，这个时候系统会保留所有结果（迪卡尔积）<br>内连接还可以使用where 代替 on关键字（where 没有 on效率高）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select * from my_student inner join my_class on my_student.c_id = my_class.id;</span><br><span class="line">-- 字段别名以及表别名的使用：在查询数据的时候，不同表有同名字段，这个时候需要加上表名才能区分，而表名太长，通常可以使用别名。</span><br><span class="line">-- 字段和表别名</span><br><span class="line">select s.*, c.name as c_name, c.room from my_student as s inner join my_class as c on s.c_id = c.id;</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-外连接（常用-）"><a href="#3-外连接（常用-）" class="headerlink" title="3.外连接（常用)）"></a>3.外连接（常用)）</h4><p>外连接：outer join ,以某张表为主，取出里面的所有记录，然后每条与另外一张表进行连接：不管内不能匹配上条件，最终都会保留，能匹配，正确保留；不能匹配，其它表的字段都置空NULL</p>
+<p>外连接分为两种：是以某张表为主： 有主表</p>
+<ul>
+<li>Left join: 左外连接（左连接），以左表为主表</li>
+<li>Right join: 右外连接（右连接），以右表为主表</li>
+</ul>
+<p>基本语法：左表 left/right 右表 on 左表.字段 = 右表.字段；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 左连接</span><br><span class="line">select s.*, c.name as c_name, c.room from my_student as s left join my_class as c on s.c_id = c.id;</span><br><span class="line"></span><br><span class="line">-- 右连接</span><br><span class="line">select s.*, c.name as c_name, c.room from my_student as s right join my_class as c on s.c_id = c.id;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-自然连接（不常用"><a href="#4-自然连接（不常用" class="headerlink" title="4.自然连接（不常用)"></a>4.自然连接（不常用)</h4><p>自然连接： natural join, 自然连接，就是自动匹配连接条件，系统以字段名字作为匹配模式（同名字段就作为条件，多个同名字都作为条件）。<br>自然连接：可以分为自然内连接和自然外连接。</p>
+<ul>
+<li>自然内连接： 左表 natural join 右表；</li>
+<li>自然外连接： 左表 natural left/right join 右表；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 自然内连接</span><br><span class="line">select * from my_student natural join my_class;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="十、触发器"><a href="#十、触发器" class="headerlink" title="十、触发器"></a>十、触发器</h1><p>如：没下一个订单，库存减少<br>触发器：trigger,事先为某张表绑定好一段代码，当表中的某些内容发生改变的时候（增删改），系统会自动触发代码，执行</p>
+<p>触发器：事件类型，触发时间，触发对象</p>
+<ul>
+<li>触发类型：增删改，三种类型insert、delete和update</li>
+<li>触发时间：前后：before和after</li>
+<li>触发对象：表中的每一条记录（行）<br>一张表中只能拥有一种触发时间的一种类型的触发器：最多一张表能有6个触发器</li>
+</ul>
+<h4 id="1-触发器创建"><a href="#1-触发器创建" class="headerlink" title="1.触发器创建"></a>1.触发器创建</h4><p>在sql高级结构中：没有大括号，都是用对应的字符符号代替</p>
+<p>基本语法：<br>– 临时修改语句结束符<br>Delimiter 自定义符号：后续代码中只有碰到自定义符号才算结束</p>
+<p>create trigger 触发器名字 触发时间 事件类型 on 表名 for each row<br>Begin – 代表左大括号 开始<br>      – 里面就是触发器的内容：每行内容都必须使用语句结束符：分号<br>End   – 代表右大括号 结束<br>– 语句结束符<br>自定义符号</p>
+<p>– 将临时修改过来<br>Delimiter ;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">-- 触发器： 订单生成一个，商品库存减少</span><br><span class="line"></span><br><span class="line">delimiter $$</span><br><span class="line"></span><br><span class="line">create trigger after_order insert on my_order for each row</span><br><span class="line">begin</span><br><span class="line">  -- 触发器内容开始</span><br><span class="line">  update my_goods set inv = inv - 1 where id = 2;</span><br><span class="line">end</span><br><span class="line">$$</span><br><span class="line">-- 修正结束符</span><br><span class="line">delimiter ;</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年05月14日 10:27</p>
+        <p>原始链接： <a class="post-url" href="/2018/05/09/PHP/Mysql的学习/" title="Mysql学习">https://jqhee.github.io/2018/05/09/PHP/Mysql的学习/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、阶段"><span class="post-toc-text">一、阶段</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、数据库"><span class="post-toc-text">二、数据库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、关系型数据库"><span class="post-toc-text">三、关系型数据库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、关键字说明"><span class="post-toc-text">四、关键字说明</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、操作指令集合SQL"><span class="post-toc-text">五、操作指令集合SQL</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、Mysql数据库"><span class="post-toc-text">六、Mysql数据库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-新增数据库"><span class="post-toc-text">1.新增数据库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-查看数据库"><span class="post-toc-text">2.查看数据库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-更新数据库"><span class="post-toc-text">3.更新数据库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-删除数据库"><span class="post-toc-text">4.删除数据库</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、表操作"><span class="post-toc-text">七、表操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-新增数据表next-gt-13"><span class="post-toc-text">1.新增数据表next -&gt; 13</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、事务"><span class="post-toc-text">八、事务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-手动开启事务"><span class="post-toc-text">1.手动开启事务</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-自动事务处理"><span class="post-toc-text">2.自动事务处理</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、连接查询"><span class="post-toc-text">九、连接查询</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-交叉连接-应该避免使用"><span class="post-toc-text">1.交叉连接(应该避免使用)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-内连接（常用"><span class="post-toc-text">2.内连接（常用)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-外连接（常用-）"><span class="post-toc-text">3.外连接（常用)）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-自然连接（不常用"><span class="post-toc-text">4.自然连接（不常用)</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十、触发器"><span class="post-toc-text">十、触发器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-触发器创建"><span class="post-toc-text">1.触发器创建</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/05/09/PHP/Mysql优化/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Mysql优化
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/05/09/PHP/PHP市面上常用的框架/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">php常用的框架</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

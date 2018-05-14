@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mac 搭建php开发环境 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="一、配置虚拟主机1.给整个文件夹权限1sudo  chmod  -R 777 Documents 2.设置虚拟主机  vim /etc/hosts   1.在终端运行 sudo vi /etc/apache2/httpd.conf，打开Apche的配置文件   2.在httpd.conf中找到Include /private/etc/apache2/extra/httpd-vhosts.conf，">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 搭建php开发环境">
+<meta property="og:url" content="https://jqhee.github.io/2018/05/09/PHP/Mac 搭建PHP环境/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="一、配置虚拟主机1.给整个文件夹权限1sudo  chmod  -R 777 Documents 2.设置虚拟主机  vim /etc/hosts   1.在终端运行 sudo vi /etc/apache2/httpd.conf，打开Apche的配置文件   2.在httpd.conf中找到Include /private/etc/apache2/extra/httpd-vhosts.conf，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-c2eee4c00aa60b2d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-9ee71d3090d54bef.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-1d5c367e1281966e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-c073f14e85ae3ac4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-efa33ea1523ab2dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-68fa9230fd709f62.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/678898-003ed0870dc3ba73.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-05-14T02:27:01.490Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac 搭建php开发环境">
+<meta name="twitter:description" content="一、配置虚拟主机1.给整个文件夹权限1sudo  chmod  -R 777 Documents 2.设置虚拟主机  vim /etc/hosts   1.在终端运行 sudo vi /etc/apache2/httpd.conf，打开Apche的配置文件   2.在httpd.conf中找到Include /private/etc/apache2/extra/httpd-vhosts.conf，">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/678898-c2eee4c00aa60b2d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/Mac 搭建PHP环境" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Mac 搭建php开发环境
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-05-09
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、配置虚拟主机"><a href="#一、配置虚拟主机" class="headerlink" title="一、配置虚拟主机"></a>一、配置虚拟主机</h1><h4 id="1-给整个文件夹权限"><a href="#1-给整个文件夹权限" class="headerlink" title="1.给整个文件夹权限"></a>1.给整个文件夹权限</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo  chmod  -R 777 Documents</span><br></pre></td></tr></table></figure>
+<h4 id="2-设置虚拟主机"><a href="#2-设置虚拟主机" class="headerlink" title="2.设置虚拟主机"></a>2.设置虚拟主机</h4><ul>
+<li><ol start="0">
+<li><code>vim /etc/hosts</code></li>
+</ol>
+</li>
+<li><p>1.在终端运行 <code>sudo vi /etc/apache2/httpd.conf</code>，打开Apche的配置文件 </p>
+</li>
+<li><p>2.在<code>httpd.conf</code>中找到<code>Include /private/etc/apache2/extra/httpd-vhosts.conf</code>，去掉前面的“＃”，保存并退出。 </p>
+</li>
+<li><p>3.运行<code>sudo apachectl restart</code>，重启Apache后就开启了虚拟主机配置功能。 </p>
+</li>
+<li><p>4.运行<code>sudo vi /etc/apache2/extra/httpd-vhosts.conf</code>，就打开了配置虚拟主机文件<code>httpd-vhost.conf</code>，配置虚拟主机了。需要注意的是该文件默认开启了两个作为例子的虚拟主机</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">      DocumentRoot &quot;/Library/WebServer/Documents/&quot;</span><br><span class="line">      ServerName www.hjq.com</span><br><span class="line">      ErrorLog &quot;/private/var/log/apache2/dummy-host2.example.com-error_log&quot;</span><br><span class="line">      CustomLog &quot;/private/var/log/apache2/dummy-host2.example.com-access_log&quot;         common</span><br><span class="line">  &lt;Directory /&gt;</span><br><span class="line"> Options Indexes FollowSymLinks MultiViews</span><br><span class="line"> AllowOverride None</span><br><span class="line"> Order deny,allow </span><br><span class="line"> Allow from all </span><br><span class="line"> &lt;/Directory&gt;</span><br><span class="line"> &lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+<p>保存，退出，重启Apache。</p>
+<p>6.运行<code>sudo vi /etc/hosts</code>，打开hosts配置文件，加入<code>127.0.0.1 www.hjq.com</code>，这样就可以配置完成test虚拟主机了。</p>
+<h1 id="二、Apache"><a href="#二、Apache" class="headerlink" title="二、Apache"></a>二、Apache</h1><ul>
+<li><p>开启Apache：<br><code>sudo apachectl start</code></p>
+</li>
+<li><p>关闭Apache：<br><code>sudo apachectl stop</code></p>
+</li>
+<li><p>重启Apache：<br><code>sudo apachectl  -k restart</code><br><code>sudo apachectl restart</code></p>
+</li>
+<li><p>查看Apache版本：<br><code>sudo apachectl  -v</code></p>
+</li>
+</ul>
+<p>在浏览器中输入<code>localhost</code>，如果出现如下默认的“It works!”界面，则表示Apache开启成功</p>
+<h1 id="三、开启PHP环境"><a href="#三、开启PHP环境" class="headerlink" title="三、开启PHP环境"></a>三、开启PHP环境</h1><p><strong>1. 开启PHP</strong></p>
+<p>需要修改Apache配置文件，方法如下：<br>打开终端，输入命令：<br><code>sudo vim /etc/apache2/httpd.conf</code></p>
+<p>找到<br><code>#LoadModule php5_module libexec/apache2/libphp5.so</code>，去掉注释（删除前面的<strong>井</strong>号）。</p>
+<p>mac下Apache的默认文件夹为<br><code>/Library/WebServer/Documents</code>，<br>在该目录下创建一个名为<code>test.php</code>文件，在文件中添加如下内容：<code>&lt;?php phpInfo(); ?&gt;</code>。然后在浏览器中输入<code>localhost/test.php</code>，如果出现如下PHP的info页，则表示PHP开启成功，如果不成功，用前面的命令重启Apache再试.<br><img src="http://upload-images.jianshu.io/upload_images/678898-c2eee4c00aa60b2d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948978758847.jpg"></p>
+<p>解决问题 - 修改Apache目录<br>上面说到了mac下Apache的默认文件夹为<br><code>/Library/WebServer/Documents</code>，<br>该目录默认是隐藏的，操作不是很方便，我们可以将其修改成自定义的目录。</p>
+<p>打开终端，输入命令：<br><code>sudo vim /etc/apache2/httpd.conf</code></p>
+<p>找到如下两处<br><code>DocumentRoot &quot;/Library/WebServer/Documents&quot;</code></p>
+<p>将两处中引号中的目录替换为自定义的目录</p>
+<p>完成以上三步后，重启Apache，将之前创建的<code>test.php</code>文件拷贝到自定义目录中，然后在浏览器中输入<code>localhost/test.php</code>，如果出现PHP的info页，则表示目录修改成功,如下图效果。<br><img src="http://upload-images.jianshu.io/upload_images/678898-9ee71d3090d54bef.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948978758847.jpg"></p>
+<h1 id="四、phpMyAdmin"><a href="#四、phpMyAdmin" class="headerlink" title="四、phpMyAdmin"></a>四、phpMyAdmin</h1><p>下载地址：<a href="https://www.phpmyadmin.net" target="_blank" rel="noopener">https://www.phpmyadmin.net</a><br>安装步骤：</p>
+<ul>
+<li><p>1.去“下载”找到<code>phpMyAdmin-4.6.4-all-languages</code>文件夹，更改文件夹为<code>phpmyadmin</code>，放在<code>/Library/WebServer/Document/</code>目录下（Apache的根目录）</p>
+</li>
+<li><p>2.终端进入 <code>cd /etc/apache2</code>文件夹目录下，</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/678898-1d5c367e1281966e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948989778235.jpg"></p>
+<p>用 vim 打开<code>httpd.conf</code>,修改成以下内容并保存<br><img src="http://upload-images.jianshu.io/upload_images/678898-c073f14e85ae3ac4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948990869810.jpg"></p>
+<p>在浏览器打开<code>http://localhost/phpmyadmin/</code>网址，则会出现下图的效果<br><img src="http://upload-images.jianshu.io/upload_images/678898-efa33ea1523ab2dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948992320385.jpg"></p>
+<p>安装过程遇到的错误：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/678898-68fa9230fd709f62.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948993662587.jpg"></p>
+<p>解决办法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /var/mysql</span><br><span class="line">sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock</span><br></pre></td></tr></table></figure>
+<p>然后重启Apache生效</p>
+<h1 id="四、Mysql"><a href="#四、Mysql" class="headerlink" title="四、Mysql"></a>四、Mysql</h1><h4 id="关于mac终端连接安装mysql"><a href="#关于mac终端连接安装mysql" class="headerlink" title="关于mac终端连接安装mysql"></a>关于mac终端连接安装mysql</h4><p>1.提示信息<br><code>ERROR 1045: Access denied for user: &#39;root@localhost&#39; (Using 
+password: NO)</code></p>
+<p>或者</p>
+<p><code>ERROR 1045: Access denied for user: &#39;root@localhost&#39; (Using 
+password: YES)</code></p>
+<p>2.解决办法<br>通过命令关掉mysql服务<br><code>/usr/local/mysql/bin/mysqladmin -u root -p shutdown</code></p>
+<p>2.进入mysql的bin目录执行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/mysql/bin</span><br><span class="line">$ sudo su</span><br></pre></td></tr></table></figure>
+<p>之后输入管理员密码会看到</p>
+<p><code>sh-3.2#</code></p>
+<p>之后我们输入下面命令以安全模式运行mysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh-3.2# ./mysqld_safe --skip-grant-tables &amp;</span><br></pre></td></tr></table></figure>
+<p>执行完以上命令，mysql的服务会重新开启<br>回到终端点击<code>Command ＋ N</code> 重新打开一个终端<br>输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -u -root</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/678898-003ed0870dc3ba73.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14948242065176.jpg"></p>
+<h4 id="修改root密码"><a href="#修改root密码" class="headerlink" title="修改root密码"></a>修改root密码</h4><p>首先执行下面命令为了能够修改任意的密码<br>mysql&gt; <code>FLUSH PRIVILEGES</code>;<br>之后执行修改密码的SQL语句,这里的qsd19001008可以替换你自己想要修改的密码<br>mysql&gt; <code>SET PASSWORD FOR root@&#39;localhost&#39; = PASSWORD(&#39;newpassword&#39;);</code><br>最后刷新<br>mysql&gt;<code>FLUSH PRIVILEGES;</code></p>
+<h1 id="五、配置php-ini"><a href="#五、配置php-ini" class="headerlink" title="五、配置php.ini"></a>五、配置php.ini</h1><p>可以通过以下的代码查看php.ini文件目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;? php</span><br><span class="line">echo phpinfo();</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-配置完成文件大小限制和超时时间"><a href="#1-配置完成文件大小限制和超时时间" class="headerlink" title="1.配置完成文件大小限制和超时时间"></a>1.配置完成文件大小限制和超时时间</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">post_max_size</span><br><span class="line">max_execution_time</span><br><span class="line">upload_max_filesize</span><br></pre></td></tr></table></figure>
+<h4 id="2-开启gd拓展"><a href="#2-开启gd拓展" class="headerlink" title="2.开启gd拓展"></a>2.开启gd拓展</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">extension=php_gd2.dll</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年05月14日 10:27</p>
+        <p>原始链接： <a class="post-url" href="/2018/05/09/PHP/Mac 搭建PHP环境/" title="Mac 搭建php开发环境">https://jqhee.github.io/2018/05/09/PHP/Mac 搭建PHP环境/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、配置虚拟主机"><span class="post-toc-text">一、配置虚拟主机</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-给整个文件夹权限"><span class="post-toc-text">1.给整个文件夹权限</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-设置虚拟主机"><span class="post-toc-text">2.设置虚拟主机</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、Apache"><span class="post-toc-text">二、Apache</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、开启PHP环境"><span class="post-toc-text">三、开启PHP环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、phpMyAdmin"><span class="post-toc-text">四、phpMyAdmin</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、Mysql"><span class="post-toc-text">四、Mysql</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#关于mac终端连接安装mysql"><span class="post-toc-text">关于mac终端连接安装mysql</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#修改root密码"><span class="post-toc-text">修改root密码</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、配置php-ini"><span class="post-toc-text">五、配置php.ini</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-配置完成文件大小限制和超时时间"><span class="post-toc-text">1.配置完成文件大小限制和超时时间</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-开启gd拓展"><span class="post-toc-text">2.开启gd拓展</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/05/09/PHP/Ajax&Bootstrap/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          AJAX  &amp; Bootstrap
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/05/09/PHP/Mysql优化/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Mysql优化</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

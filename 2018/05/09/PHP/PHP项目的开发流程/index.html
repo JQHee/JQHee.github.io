@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>php项目开发流程 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="一、www（why + what + how）1.项目的意义（why？）  1.1 oop和mvc掌握得怎么样  2.项目的定位(what？)  2.1 web开发（b/s模式软件开发）  3.项目的规划(how？) 二、编程思想1. oop思想  oop: 面向对象程序设计  核心思想： 使用人类思考问题、解决问题的方式来编写程序  oop三大特征：  1.封装 2.继承 3.多态 oop好处：">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php项目开发流程">
+<meta property="og:url" content="https://jqhee.github.io/2018/05/09/PHP/PHP项目的开发流程/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="一、www（why + what + how）1.项目的意义（why？）  1.1 oop和mvc掌握得怎么样  2.项目的定位(what？)  2.1 web开发（b/s模式软件开发）  3.项目的规划(how？) 二、编程思想1. oop思想  oop: 面向对象程序设计  核心思想： 使用人类思考问题、解决问题的方式来编写程序  oop三大特征：  1.封装 2.继承 3.多态 oop好处：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-14T02:27:01.492Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php项目开发流程">
+<meta name="twitter:description" content="一、www（why + what + how）1.项目的意义（why？）  1.1 oop和mvc掌握得怎么样  2.项目的定位(what？)  2.1 web开发（b/s模式软件开发）  3.项目的规划(how？) 二、编程思想1. oop思想  oop: 面向对象程序设计  核心思想： 使用人类思考问题、解决问题的方式来编写程序  oop三大特征：  1.封装 2.继承 3.多态 oop好处：">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/PHP项目的开发流程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      php项目开发流程
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-05-09
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="一、www（why-what-how）"><a href="#一、www（why-what-how）" class="headerlink" title="一、www（why + what + how）"></a>一、www（why + what + how）</h1><p>1.项目的意义（why？）</p>
+<ul>
+<li>1.1 oop和mvc掌握得怎么样</li>
+</ul>
+<p>2.项目的定位(what？)</p>
+<ul>
+<li>2.1 web开发（b/s模式软件开发）</li>
+</ul>
+<p>3.项目的规划(how？)</p>
+<h1 id="二、编程思想"><a href="#二、编程思想" class="headerlink" title="二、编程思想"></a>二、编程思想</h1><h5 id="1-oop思想"><a href="#1-oop思想" class="headerlink" title="1. oop思想"></a>1. oop思想</h5><p>  oop: 面向对象程序设计<br>  核心思想： 使用人类思考问题、解决问题的方式来编写程序<br>  oop三大特征：</p>
+<ul>
+<li>1.封装</li>
+<li>2.继承</li>
+<li><p>3.多态</p>
+<p>oop好处：可重用、可拓展、可维护、灵活性高</p>
+</li>
+</ul>
+<h5 id="2-mvc模式【思想】"><a href="#2-mvc模式【思想】" class="headerlink" title="2. mvc模式【思想】"></a>2. mvc模式【思想】</h5><h1 id="三、项目的搭建"><a href="#三、项目的搭建" class="headerlink" title="三、项目的搭建"></a>三、项目的搭建</h1><p>1.良好的项目结构<br>2.统一的命名规范<br>3.单一的入口</p>
+<h5 id="1-项目结构"><a href="#1-项目结构" class="headerlink" title="1.项目结构"></a>1.项目结构</h5><ul>
+<li><p>application - 应用程序目录</p>
+<ul>
+<li><p>controllers - 控制器目录</p>
+<ul>
+<li>admin - 后台目录</li>
+<li>home - 前台目录</li>
+</ul>
+</li>
+<li><p>models - 数据库模式目录</p>
+</li>
+<li><p>views - 视图目录</p>
+<ul>
+<li>admin - 后台目录</li>
+<li>home - 前台目录</li>
+</ul>
+</li>
+<li><p>config - 配置文件目录</p>
+</li>
+</ul>
+</li>
+<li><p>framework - 框架目录</p>
+<ul>
+<li>core - 框架核心类</li>
+<li>databases - 数据库驱动类</li>
+<li>libraries - 类库目录</li>
+<li>helpers - 辅助函数目录</li>
+</ul>
+</li>
+<li><p>public - 前台资源目录</p>
+<ul>
+<li>css</li>
+<li>js</li>
+<li>images</li>
+<li>uploads</li>
+</ul>
+</li>
+<li><p>index.php - 入口文件</p>
+</li>
+</ul>
+<h1 id="四、编码规范"><a href="#四、编码规范" class="headerlink" title="四、编码规范"></a>四、编码规范</h1><ol>
+<li>一定要有注释</li>
+<li><p>一定要有统一的命名规范</p>
+<ul>
+<li>类文件 类名.class.php<br>(类名首字母大写，大驼峰命名法,如：GoodsController  方法名：小驼峰， 如：addAction<br>属性：小驼峰/或者下划线开头)<br>函数名：下划线式：var_dump、is_array 连写式：imagecreatetruecolor<br>常量名：大写</li>
+</ul>
+</li>
+<li><p>严格区分大小写</p>
+</li>
+<li>主要缩进，代码对齐</li>
+</ol>
+<h1 id="五、TP框架"><a href="#五、TP框架" class="headerlink" title="五、TP框架"></a>五、TP框架</h1><p>IDE: NetBeans<br>ctr + H 替换<br>ctr + Shift+ H 全局替换<br>ctr + G 定位行号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 使用常量来替换</span><br><span class="line">&lt;?php echo IMAGE_URL; ?&gt;</span><br></pre></td></tr></table></figure></p>
+<p>1.下载地址：<a href="http://www.thinkphp.cn/down.html" target="_blank" rel="noopener">http://www.thinkphp.cn/down.html</a><br>2.搭建应用</p>
+<ul>
+<li><p>2.1 创建index.php入口文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 避免汉字出现乱码</span><br><span class="line">header (&quot;content-type:text/html;charset=utf-8;&quot;);</span><br><span class="line">// 打开开发调试模式,另一种是生产模式</span><br><span class="line">#define(&apos;APP_DEBUG&apos;,true);</span><br><span class="line">// 在模板文件需要绝对路径引用静态资源文件（css/js/image），路径常量</span><br><span class="line">// Home前台</span><br><span class="line">define(&apos;CSS_URL&apos;,&apos;/ecshop/Home/Public/css/&apos;);</span><br><span class="line">define(&apos;IMAGE_URL&apos;,&apos;/ecshop/Home/Public/images/&apos;);</span><br><span class="line">define(&apos;JS_URL&apos;,&apos;/ecshop/Home/Public/js/&apos;);</span><br><span class="line"></span><br><span class="line">// Admin后台</span><br><span class="line">define(&apos;ADMIN_CSS_URL&apos;,&apos;/ecshop/Admin/Public/css/&apos;);</span><br><span class="line">define(&apos;ADMIN_IMAGE_URL&apos;,&apos;/ecshop/Admin/Public/img/&apos;);</span><br><span class="line">define(&apos;ADMIN_JS_URL&apos;,&apos;/ecshop/Admin/Public/js/&apos;);</span><br><span class="line">// 引用tp框架接口文件</span><br><span class="line">include (&quot;../ThinkPHP/ThinkPHP.php&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.2 创建虚拟主机(apache 目录：apache2/conf/extra/httpd-vhosts.conf)</p>
+</li>
+<li><p>2.3 重启apache, 增加域名解析 (hosts)</p>
+</li>
+<li><p>2.4 第一次运行会自动生成目录：</p>
+<ul>
+<li>Common - 项目的函数库和配置文件</li>
+<li>Home - 分组目录<ul>
+<li>Public - 静态资源文件（js、css、image）</li>
+</ul>
+</li>
+<li>Admin - (自己创建后台文件夹)</li>
+<li>Model - 数据库模型文件</li>
+<li>Runtime - 产生的临时文件（如日志）</li>
+<li>Tools - 工具类</li>
+</ul>
+</li>
+</ul>
+<p>3.路由形式(四种路由形式)</p>
+<ul>
+<li><p>3.1 基本get</p>
+<ul>
+<li>http://网址/index.php?g=分组&amp;c=控制器&amp;a=操作方法 （如：index.php?m=Home&amp;c=Index&amp;a=index）</li>
+</ul>
+</li>
+<li><p>3.2 pathInfo 路径形式【默认】</p>
+<ul>
+<li>index.php/Home/Index/index.html</li>
+</ul>
+</li>
+<li><p>3.3 伪静态形式</p>
+<ul>
+<li>省略index.php入口文件</li>
+</ul>
+</li>
+<li><p>3.4 兼容形式</p>
+<ul>
+<li>index.php?s=/Home/Index/index.html</li>
+</ul>
+</li>
+</ul>
+<p>4.创建控制器</p>
+<ul>
+<li>1.tp命名空间</li>
+<li>2.名称 UserController.class.php 、GoodsController.class.php</li>
+</ul>
+<p>5.模板加载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 1.没有参数，表示模板与当前方法名称一致</span><br><span class="line">$this-&gt;display();</span><br><span class="line">// 2.调用当前控制器下的其它模板</span><br><span class="line">$this-&gt;display(‘register’);</span><br><span class="line">// 3.调用其它控制器的具体模板</span><br><span class="line">$this-&gt;display(‘Goods/showList’);</span><br></pre></td></tr></table></figure></p>
+<p>6.加载静态资源文件</p>
+<ul>
+<li>要用(虚拟主机下)绝对路径（/shop/Home/Public/css/style.css）</li>
+<li>注意：使用相对路径，get形式访问时成功，pathinfo路径形式访问是失败的（原因：把当前方法名当成目录，找不到资源）</li>
+</ul>
+<p>7.tb框架提供的常量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1. __MODULE__: - 路由地址分组信息 （/shop/index.php/分组）</span><br><span class="line"></span><br><span class="line">2.__CONTROLLER__: - 路由地址控制器信息 （/shop/index.php/分组/控制器）</span><br><span class="line"></span><br><span class="line">3.__ACTION__: - 路由地址操作方法信息 （/shop/index.php/分组/控制器/操作方法）</span><br><span class="line"></span><br><span class="line">4.__SELF__: - 路由地址全部信息 （/shop/index.php/分组/控制器/操作方法/名称1/值）</span><br><span class="line"></span><br><span class="line">5.MODULE_NAME: - 分组名称</span><br><span class="line"></span><br><span class="line">6.CONTROLLER_NAME: - 控制器名称</span><br><span class="line"></span><br><span class="line">7.ACTION_NAME: - 操作方法名称</span><br></pre></td></tr></table></figure></p>
+<p>8.配置文件</p>
+<ul>
+<li>1.ThinkPHP/Conf/convertion.php 系统主要的配置文件</li>
+<li>2.shop/Common/Conf/config.php 当前shop项目的配置文件，针对各个分组起作用</li>
+<li>3.shop/Home/Conf/config.php  当前shop项目Home分组 </li>
+<li><strong>备注： 以上三个配置文件，如果存在同名的配置变量，后者覆盖前者</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">// shop/Common/Conf/config.php</span><br><span class="line">&lt;? php</span><br><span class="line">return array &#123;</span><br><span class="line">  // 显示页面底部的跟踪信息</span><br><span class="line">  &apos;SHOW_PAGE_TRACE&apos; =&gt; true,</span><br><span class="line">  // 默认分组</span><br><span class="line">  ‘DEFAULT_MODULE’ =&gt; &apos;Home&apos;,</span><br><span class="line">  // 设置一个对比的分组列表</span><br><span class="line">  ‘MODULE_ALLOW_LIST’ =&gt; array(&apos;Home&apos;,&apos;Admin&apos;),</span><br><span class="line">  // 开启Smarty模板引擎</span><br><span class="line">  ‘TMPL_ENGING_TYPE’ =&gt; &apos;Smarty&apos;,</span><br><span class="line">  // 变换smarty标记符号</span><br><span class="line">  &apos;TMPL_ENGING_CONFIG&apos; =&gt; array (</span><br><span class="line">    &apos;left_delimiter&apos; =&gt; &apos;&lt;%%%&apos;,</span><br><span class="line">    &apos;right_delimiter&apos; =&gt; &apos;%%%&gt;&apos;,</span><br><span class="line">  ),</span><br><span class="line">  </span><br><span class="line">    /* 数据库设置 */</span><br><span class="line">    &apos;DB_TYPE&apos;               =&gt;  &apos;mysql&apos;,     // 数据库类型</span><br><span class="line">    &apos;DB_HOST&apos;               =&gt;  &apos;localhost&apos;, // 服务器地址</span><br><span class="line">    &apos;DB_NAME&apos;               =&gt;  &apos;&apos;,          // 数据库名</span><br><span class="line">    &apos;DB_USER&apos;               =&gt;  &apos;root&apos;,      // 用户名</span><br><span class="line">    &apos;DB_PWD&apos;                =&gt;  &apos;123456&apos;,          // 密码</span><br><span class="line">    &apos;DB_PORT&apos;               =&gt;  &apos;3306&apos;,        // 端口</span><br><span class="line">    &apos;DB_PREFIX&apos;             =&gt;  &apos;sw_&apos;,    // 数据库表前缀</span><br><span class="line">    &apos;DB_PARAMS&apos;          	=&gt;  array(), // 数据库连接参数    </span><br><span class="line">    &apos;DB_DEBUG&apos;  			=&gt;  TRUE, // 数据库调试模式 开启后可以记录SQL日志</span><br><span class="line">    &apos;DB_FIELDS_CACHE&apos;       =&gt;  true,        // 启用字段缓存</span><br><span class="line">    &apos;DB_CHARSET&apos;            =&gt;  &apos;utf8&apos;,      // 数据库编码默认采用utf8</span><br><span class="line">    &apos;DB_DEPLOY_TYPE&apos;        =&gt;  0, // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)</span><br><span class="line">    &apos;DB_RW_SEPARATE&apos;        =&gt;  false,       // 数据库读写是否分离 主从式有效</span><br><span class="line">    &apos;DB_MASTER_NUM&apos;         =&gt;  1, // 读写分离后 主服务器数量</span><br><span class="line">    &apos;DB_SLAVE_NO&apos;           =&gt;  &apos;&apos;, // 指定从服务器序号</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="六、开启Smarty模板引擎"><a href="#六、开启Smarty模板引擎" class="headerlink" title="六、开启Smarty模板引擎"></a>六、开启Smarty模板引擎</h1><p>注意：如果不开启Smarty模板引擎，默认使用tp框架的Think模板引擎<br>1.{}与css/js有冲突</p>
+<ul>
+<li>{}中间加空格 如：{ 内容 }</li>
+<li>{} 左右标记不在同一行</li>
+<li>设置{literal}{\literal}</li>
+<li>外部引用js/css文件</li>
+<li>变换smarty标记符号</li>
+</ul>
+<p>2.访问静态变量</p>
+<ul>
+<li>访问常量 {$smarty.const.CSS_URL}</li>
+</ul>
+<h1 id="七、数据库操作Model模型文件"><a href="#七、数据库操作Model模型文件" class="headerlink" title="七、数据库操作Model模型文件"></a>七、数据库操作Model模型文件</h1><p>备份数据库：终端命令-&gt;mysqldump -u root -p 数据库名&gt;备份的名称（xx.sql）<br>1.连接和配置数据库<br>2.创建model模型类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// GoodsModel.class.php</span><br><span class="line">&lt;? php</span><br><span class="line">// 命名空间 php5.3以后的版本</span><br><span class="line">namespace Model;</span><br><span class="line">user Think\Model;</span><br><span class="line"></span><br><span class="line">// 表名：sw_goods</span><br><span class="line">class  GoodsModel extends Model &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 表名：englist ，特殊表没有sw_前缀开头</span><br><span class="line">class  EnglistModel extends Model &#123;</span><br><span class="line">  //自定义当前model操作的真实数据表名字</span><br><span class="line">  // 实际数据表（包含表前缀）</span><br><span class="line">  protected $trueTableName = &apos;englist&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.操作Model<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 1.实例化model对象</span><br><span class="line">$goods = new \Model\GoodsModel();</span><br><span class="line">dump($goods)</span><br><span class="line"></span><br><span class="line">// 2.实例化父类model对象,操作sw_goods数据表</span><br><span class="line">$obj = D(&apos;Goods&apos;);</span><br><span class="line">dump($obj)</span><br></pre></td></tr></table></figure></p>
+<p>4.数据库的基本操作</p>
+<ul>
+<li><p>增</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$model -&gt; add();</span><br><span class="line">// 1.数组的方式</span><br><span class="line">$数组 = &#123;</span><br><span class="line">  元素 =&gt; 值,</span><br><span class="line">&#125;;</span><br><span class="line">$model -&gt; add($数组);</span><br><span class="line"></span><br><span class="line">// 2.AR(Active Record活跃记录)方式</span><br><span class="line">$model -&gt; 属性 = 值;</span><br><span class="line">$model -&gt; add()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$z = $model -&gt; where(&quot;password=&apos;123456&apos;&quot;) -&gt; delete();</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line">$model -&gt; user_id=8;</span><br><span class="line">$z = $model -&gt; delete();</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line">$model -&gt; delete(10);</span><br><span class="line">$z = $model -&gt; delete(&quot;11,21&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 1.数组</span><br><span class="line">$model -&gt; where(&apos;goods_id =167&apos;);</span><br><span class="line">$model -&gt; save($数组);</span><br><span class="line"></span><br><span class="line">// 2.AR</span><br><span class="line">$model -&gt; where(&apos;goods_id =167&apos;);</span><br><span class="line">$model -&gt; save();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">// select返回的是一个二维数组</span><br><span class="line">$model -&gt; select(); // 查询并返回数据表中的全部信息</span><br><span class="line">$model -&gt; select(主键id值); // 查询主键信息等于条件id值的一条记录</span><br><span class="line">$model -&gt; select(&apos;id1,id2...&apos;);</span><br><span class="line"></span><br><span class="line">// 1.where()条件限制</span><br><span class="line">$model -&gt; where(&apos;goods_price &gt; 1000 and goods_name like &quot;12%&quot;&apos;);</span><br><span class="line">$model -&gt; select();</span><br><span class="line"></span><br><span class="line">// 2.limit() 记录数目限制</span><br><span class="line">$model -&gt; limit(5);</span><br><span class="line">$model -&gt; select();</span><br><span class="line"></span><br><span class="line">// 3.field() 限制查询字段</span><br><span class="line">$model -&gt; field(&apos;goods_name, goods_id&apos;);</span><br><span class="line">$model -&gt; select();</span><br><span class="line"></span><br><span class="line">// 4.oder()排序</span><br><span class="line">$model -&gt; order(&apos;goods_price ase&apos;);</span><br><span class="line">$model -&gt; select();</span><br><span class="line"></span><br><span class="line">// 5.group() 分组查询 ,不推荐使用，推荐使用原生的sql语句查询</span><br><span class="line">// 查询每个品牌的商品总数量</span><br><span class="line">$model -&gt; group(&apos;goods_branch_id&apos;);</span><br><span class="line">$model -&gt; field(&apos;goods_id,count(*)&apos;);</span><br><span class="line">$model -&gt; select();</span><br><span class="line"></span><br><span class="line">// 6.find() 返回一维数组的一条信息</span><br><span class="line">$info = $model -&gt; find($goods_id);</span><br><span class="line">dump($info);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">having() 设置sql语句查询条件</span><br><span class="line">group by 就使用 having</span><br><span class="line">where 和 having 都可以设置查询条件，两种在某些场合可以通用</span><br><span class="line">where: 条件必须是‘数据表’存在的字段</span><br><span class="line">having: 条件必须是‘结果集’中的字段</span><br><span class="line"></span><br><span class="line">// 1.两种可以通用</span><br><span class="line">select * from sw_goods where goods_price &gt; 1000;</span><br><span class="line">select * from sw_goods having goods_price &gt; 1000;</span><br><span class="line"></span><br><span class="line">// 2.不能使用having</span><br><span class="line">select goods_name, goods_id from sw_goods where goods_price &gt; 1000;</span><br><span class="line">select goods_name, goods_id from sw_goods having goods_price &gt; 1000; // 错误</span><br><span class="line"></span><br><span class="line">// 3.只能使用having</span><br><span class="line">select goods_branch_id,count(*) as cnt from sw_goods having cnt &gt; 3;</span><br><span class="line">select goods_branch_id,count(*) as cnt from sw_goods where cnt &gt; 3; // 错误</span><br></pre></td></tr></table></figure>
+<p>4.1 连贯操作</p>
+<p>5.数据填充到模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$this -&gt; assign(&apos;info&apos;,$info);</span><br><span class="line"></span><br><span class="line">// html文件 smarty</span><br><span class="line">&#123;foreach $info as $k =&gt; $v&#125;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt; &#123;*$v@iteration*&#125; &#123;$v.goods_id&#125; &lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&#123;/foreach&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="八、数据上录处理"><a href="#八、数据上录处理" class="headerlink" title="八、数据上录处理"></a>八、数据上录处理</h1><p>1.数据添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function tianjia() &#123;</span><br><span class="line">  $goods = D(&apos;Goods&apos;);</span><br><span class="line">  if (!empty($_POST)) &#123;</span><br><span class="line">    $data = $goods -&gt; create();</span><br><span class="line">    $res = $goods -&gt; add($data);</span><br><span class="line">    if $res &#123; // 添加成功</span><br><span class="line">      //$this -&gt; redirect(地址, 参数</span><br><span class="line">      , 间隔时间, 提示信息)</span><br><span class="line">      $this -&gt; redirect(&apos;showlist&apos;, array()</span><br><span class="line">      , 2, 添加商品成功);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">        $this -&gt; redirect(&apos;tianjia&apos;, array()</span><br><span class="line">      , 2, 添加商品失败);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.数据的修改<br>传递参数给编辑窗口<br>通过get参数传递和接收<br><strong>传递：index.php/分组/控制器/操作方法/名称/值/名称/值</strong><br><strong>接收： function 方法名称($名称, $名称) {}</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 隐藏域</span><br><span class="line">&lt;input type=&apos;hidden&apos; name=&apos;goods_id&apos; value=&#123;$info.goods_id&#125;/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>3.数据删除操作delete<br>生产环境：逻辑删除,只是修改一个状态,留作跟踪记录</p>
+<h1 id="九、执行原生sql语句"><a href="#九、执行原生sql语句" class="headerlink" title="九、执行原生sql语句"></a>九、执行原生sql语句</h1><p>1.查询语句：$model -&gt; query($sql);<br>2.添加、修改、删除 $model -&gt; execute($sql);</p>
+<h1 id="十、注册页面，表单验证"><a href="#十、注册页面，表单验证" class="headerlink" title="十、注册页面，表单验证"></a>十、注册页面，表单验证</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function register() &#123;</span><br><span class="line"></span><br><span class="line">  $user = new \Model\UserModel();</span><br><span class="line">  if (!empty($_POST)) &#123;</span><br><span class="line">  </span><br><span class="line">    // 把爱好的数组变为字符串</span><br><span class="line">    // $_POST[&apos;user_hobby&apos;] = implode(&apos;,&apos;, $_POST[&apos;user_hobby&apos;]);</span><br><span class="line">    // $z = $user -&gt; add($_POST);</span><br><span class="line">    </span><br><span class="line">    $data = $user -&gt; create();</span><br><span class="line">    if ($data) &#123;</span><br><span class="line">       // 把爱好的数组变为字符串</span><br><span class="line">      $data[&apos;user_hobby&apos;] = implode(&apos;,&apos;, $data[&apos;user_hobby&apos;]);</span><br><span class="line">      $z = $user -&gt; add($data);</span><br><span class="line">      echo $z;</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">      // 验证失败，输出错误信息</span><br><span class="line">      dump($user -&gt; getError());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">  &#125; else &#123;</span><br><span class="line">  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.具体验证实现<br>2.1 通过Model-&gt;create()方法实现表单信息收集处理工作<br>create()方法的作用：收集表单信息、非法字段过滤、表单自动验证、信息过滤处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;? php </span><br><span class="line"></span><br><span class="line">namepace Model;</span><br><span class="line">user Think\Model;</span><br><span class="line"></span><br><span class="line">class UserModel extends Model &#123;</span><br><span class="line"></span><br><span class="line">  // 设置验证规则</span><br><span class="line">  // 自定验证定义</span><br><span class="line">  protected $_validate = array (</span><br><span class="line">    // 1.验证用户名，非空</span><br><span class="line">    // array(字段名称(表单域name名称),验证规则,错误提示,验证条件,附加规则,验证时间)</span><br><span class="line">    array(&apos;username&apos;,&apos;require&apos;,&apos;用户名不能为空&apos;),</span><br><span class="line">    array(&apos;username&apos;,&apos;require&apos;,&apos;用户名被占用&apos;, &apos;unique&apos;),</span><br><span class="line">    // 2.密码</span><br><span class="line">    array(&apos;password&apos;,&apos;require&apos;,&apos;密码不能为空&apos;),</span><br><span class="line">    // 3.重复密码</span><br><span class="line">    array(&apos;password2&apos;,&apos;require&apos;,&apos;密码不能为空&apos;),</span><br><span class="line">    array(&apos;password2&apos;,&apos;password&apos;,&apos;与密码保持一致&apos;, 0, &apos;confirm&apos;),</span><br><span class="line">    // 4.邮箱验证</span><br><span class="line">    array(&apos;user_email&apos;,&apos;email&apos;,&apos;邮箱格式不正确&apos;),</span><br><span class="line">    // 5.qq,纯数字 5-12</span><br><span class="line">    array(&apos;user_qq&apos;,&apos;number&apos;,&apos;qq号码为数字信息&apos;),</span><br><span class="line">    array(&apos;user_qq&apos;,&apos;5,12&apos;,&apos;qq号码长度不正确&apos;, 0, &apos;length&apos;),</span><br><span class="line">    // 6.学历</span><br><span class="line">    array(&apos;user_xueli&apos;,&apos;2,3,4,5&apos;,&apos;学历必须选择一个&apos;, 0, &apos;in&apos;),</span><br><span class="line">    // 6.爱好</span><br><span class="line">    array(&apos;user_hobby&apos;,&apos;check_hobby&apos;,&apos;爱好至少选择两个至以上&apos;, 1, &apos;callback&apos;),</span><br><span class="line">    // 7.手机号码验证</span><br><span class="line">    array(&apos;user_phone&apos;,&apos;/^1[3|4|5|7|8|9][0-9]\d&#123;4,8&#125;$/&apos;,&apos;手机号码错误！&apos;,&apos;0&apos;,&apos;regex&apos;,1),</span><br><span class="line">  );</span><br><span class="line">  </span><br><span class="line">  // $arg参数 代表被收集到的表单信息</span><br><span class="line">  function check_hobby($arg) &#123;</span><br><span class="line">    if (count($arg) &lt; 2) &#123;</span><br><span class="line">      return false;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="十一、验证码"><a href="#十一、验证码" class="headerlink" title="十一、验证码"></a>十一、验证码</h1><p>gd库画图<br>生成4位随机字符<br>字符画到图片上、字符保存到session中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// Verify.class.php</span><br><span class="line">// 生成验证码</span><br><span class="line">function verifyImg() &#123;</span><br><span class="line">  $cfg = array (</span><br><span class="line">    &apos;imageH&apos; =&gt; 40,</span><br><span class="line">    &apos;imageW&apos; =&gt; 100,</span><br><span class="line">    &apos;fontSize&apos; =&gt; 15,</span><br><span class="line">    &apos;length&apos; =&gt; 4,</span><br><span class="line">    &apos;fontttf&apos; =&gt; &apos;4.ttf&apos;, // 字体</span><br><span class="line">  );</span><br><span class="line">  $very = new \Think\Verify($cfg);</span><br><span class="line">  $very -&gt; entry();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>校验验证码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function login() &#123;</span><br><span class="line">  if (!empty($_POST)) &#123;</span><br><span class="line">    // 检验验证码</span><br><span class="line">    // $_SESSION[名称]</span><br><span class="line">    $vry = new \Think\Verify();</span><br><span class="line">    if ($vry -&gt; check($_POST[&apos;captcha&apos;])) &#123;</span><br><span class="line">      // 验证验证成功</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="十二、附件上传"><a href="#十二、附件上传" class="headerlink" title="十二、附件上传"></a>十二、附件上传</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">// html</span><br><span class="line">&lt;form enctype=&quot;multipart/form-data&quot;&gt; </span><br><span class="line">  &lt;input type=&quot;file&quot;/&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">// php接收附件信息</span><br><span class="line">$_FILES 接收附件信息</span><br><span class="line">name size tmp_name type error( error: 0 没有问题 1/2 大小限制 3只上传部分附件 4没有上传)</span><br><span class="line"></span><br><span class="line">// 功能类 Upload.class.php</span><br><span class="line">func upload() &#123;</span><br><span class="line">  $goods = D(&apos;Goods&apos;);</span><br><span class="line">  if (!empty($_POST)) &#123;</span><br><span class="line">    // 图片处理</span><br><span class="line">    if ($_FILES[&apos;goods_pic&apos;][&apos;error&apos;]===0) &#123;</span><br><span class="line">      // 设置附件存储位置</span><br><span class="line">      $cfg = array (</span><br><span class="line">        &apos;rootPath&apos; =&gt; &apos;./Public/Upload/&apos;, 保存根路径</span><br><span class="line">      );</span><br><span class="line">      $up = new \Think\Upload($cfg);</span><br><span class="line">      // 上传附件</span><br><span class="line">      $z = $up -&gt; uploadOne($_FILES[&apos;goods_pic&apos;]);</span><br><span class="line">      //dump($z);</span><br><span class="line">      // 附件保存到数据库中</span><br><span class="line">      $bigPicName = $up -&gt; rootPath.$z[&apos;saveath&apos;].$z[&apos;savename&apos;];</span><br><span class="line">      $_POST[&apos;goods_big_img&apos;] = substr($bigPicName,2); // 去掉./</span><br><span class="line">      </span><br><span class="line">      // 给上传好的图片制作缩略图</span><br><span class="line">      $im = \Think\Image();</span><br><span class="line">      // 打开源图片</span><br><span class="line">      $im -&gt; open($bigPicName);</span><br><span class="line">      // 为原图制作缩略图</span><br><span class="line">      $im -&gt; thumb(125, 125); // 等比例缩放</span><br><span class="line">      // 把制作好的缩略图把存到服务器上</span><br><span class="line">      $smalpicname = $up -&gt; rootPath.$z[&apos;saveath&apos;].&quot;small_&quot;.$z[&apos;savename&apos;];</span><br><span class="line">      $im -&gt; save($smalpicname)</span><br><span class="line">      // 把缩略图保存到数据库中</span><br><span class="line">      $_POST[&apos;goods_small_img&apos;] = substr($bigPicName,2);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    $data = $goods -&gt; create();</span><br><span class="line">    $res = $goods -&gt; add($data);</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>制作缩略图<br>原理： 把一个已有图片打开，裁剪已有图片某个部分，该部分经过放大、缩小处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// 功能类： Image.class.php</span><br></pre></td></tr></table></figure></p>
+<h1 id="十三、数据分页"><a href="#十三、数据分页" class="headerlink" title="十三、数据分页"></a>十三、数据分页</h1><p>limit 偏移量，长度<br>偏移量=（当前页码-1）*每页条数<br>功能类： Page.class.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 自定义工具类</span><br><span class="line">// Page.class.php</span><br></pre></td></tr></table></figure></p>
+<h1 id="十四、登录功能"><a href="#十四、登录功能" class="headerlink" title="十四、登录功能"></a>十四、登录功能</h1><p>用户名信息给session持久化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function login() &#123;</span><br><span class="line">  if (!empty($_POST)) &#123;</span><br><span class="line">    $userpwd = array (</span><br><span class="line">      &apos;mg_name&apos; = $_POST[&apos;admin_user&apos;],</span><br><span class="line">      &apos;mg_pwd&apos; =  $_POST[&apos;admin_pwd&apos;]</span><br><span class="line">    );</span><br><span class="line">    $info = D(&apos;Manager&apos;) -&gt; where($userpwd) -&gt; find();</span><br><span class="line">    if ($info) &#123;</span><br><span class="line">      // session持久化用户信息</span><br><span class="line">      session(&apos;admin_name&apos;, $info[&apos;mg_name&apos;]);</span><br><span class="line">      session(&apos;admin_id&apos;, $info[&apos;mg_id&apos;]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="十五、RBAC"><a href="#十五、RBAC" class="headerlink" title="十五、RBAC"></a>十五、RBAC</h1><p>role base access control 基于角色的用户访问权限控制</p>
+<h1 id="十六、路由设置伪静态"><a href="#十六、路由设置伪静态" class="headerlink" title="十六、路由设置伪静态"></a>十六、路由设置伪静态</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 路由伪静态</span><br><span class="line">// 打开开关</span><br><span class="line">&apos;URL_ROUTE_RULES&apos; =&gt; true,</span><br><span class="line"></span><br><span class="line">// 规则</span><br><span class="line">&apos;URL_ROUTE_RULES&apos; =&gt; array (</span><br><span class="line"></span><br><span class="line">),</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年05月14日 10:27</p>
+        <p>原始链接： <a class="post-url" href="/2018/05/09/PHP/PHP项目的开发流程/" title="php项目开发流程">https://jqhee.github.io/2018/05/09/PHP/PHP项目的开发流程/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、www（why-what-how）"><span class="post-toc-text">一、www（why + what + how）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二、编程思想"><span class="post-toc-text">二、编程思想</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-oop思想"><span class="post-toc-text">1. oop思想</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-mvc模式【思想】"><span class="post-toc-text">2. mvc模式【思想】</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三、项目的搭建"><span class="post-toc-text">三、项目的搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-项目结构"><span class="post-toc-text">1.项目结构</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#四、编码规范"><span class="post-toc-text">四、编码规范</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#五、TP框架"><span class="post-toc-text">五、TP框架</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#六、开启Smarty模板引擎"><span class="post-toc-text">六、开启Smarty模板引擎</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#七、数据库操作Model模型文件"><span class="post-toc-text">七、数据库操作Model模型文件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#八、数据上录处理"><span class="post-toc-text">八、数据上录处理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#九、执行原生sql语句"><span class="post-toc-text">九、执行原生sql语句</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十、注册页面，表单验证"><span class="post-toc-text">十、注册页面，表单验证</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十一、验证码"><span class="post-toc-text">十一、验证码</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十二、附件上传"><span class="post-toc-text">十二、附件上传</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十三、数据分页"><span class="post-toc-text">十三、数据分页</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十四、登录功能"><span class="post-toc-text">十四、登录功能</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十五、RBAC"><span class="post-toc-text">十五、RBAC</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#十六、路由设置伪静态"><span class="post-toc-text">十六、路由设置伪静态</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/05/09/PHP/PHP市面上常用的框架/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          php常用的框架
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/05/09/PHP/Redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Redis</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
