@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
   
-  <meta name="description" content="一、www（why + what + how）1.项目的意义（why？）  1.1 oop和mvc掌握得怎么样  2.项目的定位(what？)  2.1 web开发（b/s模式软件开发）  3.项目的规划(how？) 二、编程思想1. oop思想  oop: 面向对象程序设计  核心思想： 使用人类思考问题、解决问题的方式来编写程序  oop三大特征：  1.封装 2.继承 3.多态 oop好处：">
+  <meta name="description" content="目录   一、www（why + what + how） 二、编程思想 - [1. oop思想](#1-oop%E6%80%9D%E6%83%B3) - [2. mvc模式【思想】](#2-mvc%E6%A8%A1%E5%BC%8F%E6%80%9D%E6%83%B3)  三、项目的搭建 - [1.项目结构](#1%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)  四">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="php项目开发流程">
 <meta property="og:url" content="https://jqhee.github.io/2018/05/09/PHP/PHP项目的开发流程/index.html">
 <meta property="og:site_name" content="只非鱼">
-<meta property="og:description" content="一、www（why + what + how）1.项目的意义（why？）  1.1 oop和mvc掌握得怎么样  2.项目的定位(what？)  2.1 web开发（b/s模式软件开发）  3.项目的规划(how？) 二、编程思想1. oop思想  oop: 面向对象程序设计  核心思想： 使用人类思考问题、解决问题的方式来编写程序  oop三大特征：  1.封装 2.继承 3.多态 oop好处：">
+<meta property="og:description" content="目录   一、www（why + what + how） 二、编程思想 - [1. oop思想](#1-oop%E6%80%9D%E6%83%B3) - [2. mvc模式【思想】](#2-mvc%E6%A8%A1%E5%BC%8F%E6%80%9D%E6%83%B3)  三、项目的搭建 - [1.项目结构](#1%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)  四">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-14T02:27:01.492Z">
+<meta property="og:updated_time" content="2018-05-14T06:19:36.827Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php项目开发流程">
-<meta name="twitter:description" content="一、www（why + what + how）1.项目的意义（why？）  1.1 oop和mvc掌握得怎么样  2.项目的定位(what？)  2.1 web开发（b/s模式软件开发）  3.项目的规划(how？) 二、编程思想1. oop思想  oop: 面向对象程序设计  核心思想： 使用人类思考问题、解决问题的方式来编写程序  oop三大特征：  1.封装 2.继承 3.多态 oop好处：">
+<meta name="twitter:description" content="目录   一、www（why + what + how） 二、编程思想 - [1. oop思想](#1-oop%E6%80%9D%E6%83%B3) - [2. mvc模式【思想】](#2-mvc%E6%A8%A1%E5%BC%8F%E6%80%9D%E6%83%B3)  三、项目的搭建 - [1.项目结构](#1%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)  四">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -138,7 +138,35 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h1 id="一、www（why-what-how）"><a href="#一、www（why-what-how）" class="headerlink" title="一、www（why + what + how）"></a>一、www（why + what + how）</h1><p>1.项目的意义（why？）</p>
+            <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>目录</strong> </p>
+<ul>
+<li><a href="#%E4%B8%80wwwwhy--what--how">一、www（why + what + how）</a></li>
+<li><p><a href="#%E4%BA%8C%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3">二、编程思想</a></p>
+<pre><code>- [1. oop思想](#1-oop%E6%80%9D%E6%83%B3)
+- [2. mvc模式【思想】](#2-mvc%E6%A8%A1%E5%BC%8F%E6%80%9D%E6%83%B3)
+</code></pre></li>
+<li><p><a href="#%E4%B8%89%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%90%AD%E5%BB%BA">三、项目的搭建</a></p>
+<pre><code>- [1.项目结构](#1%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84)
+</code></pre></li>
+<li><p><a href="#%E5%9B%9B%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">四、编码规范</a></p>
+</li>
+<li><a href="#%E4%BA%94tp%E6%A1%86%E6%9E%B6">五、TP框架</a></li>
+<li><a href="#%E5%85%AD%E5%BC%80%E5%90%AFsmarty%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E">六、开启Smarty模板引擎</a></li>
+<li><a href="#%E4%B8%83%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9Cmodel%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6">七、数据库操作Model模型文件</a></li>
+<li><a href="#%E5%85%AB%E6%95%B0%E6%8D%AE%E4%B8%8A%E5%BD%95%E5%A4%84%E7%90%86">八、数据上录处理</a></li>
+<li><a href="#%E4%B9%9D%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%94%9Fsql%E8%AF%AD%E5%8F%A5">九、执行原生sql语句</a></li>
+<li><a href="#%E5%8D%81%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81">十、注册页面，表单验证</a></li>
+<li><a href="#%E5%8D%81%E4%B8%80%E9%AA%8C%E8%AF%81%E7%A0%81">十一、验证码</a></li>
+<li><a href="#%E5%8D%81%E4%BA%8C%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0">十二、附件上传</a></li>
+<li><a href="#%E5%8D%81%E4%B8%89%E6%95%B0%E6%8D%AE%E5%88%86%E9%A1%B5">十三、数据分页</a></li>
+<li><a href="#%E5%8D%81%E5%9B%9B%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD">十四、登录功能</a></li>
+<li><a href="#%E5%8D%81%E4%BA%94rbac">十五、RBAC</a></li>
+<li><a href="#%E5%8D%81%E5%85%AD%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE%E4%BC%AA%E9%9D%99%E6%80%81">十六、路由设置伪静态</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h1 id="一、www（why-what-how）"><a href="#一、www（why-what-how）" class="headerlink" title="一、www（why + what + how）"></a>一、www（why + what + how）</h1><p>1.项目的意义（why？）</p>
 <ul>
 <li>1.1 oop和mvc掌握得怎么样</li>
 </ul>
@@ -324,7 +352,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年05月14日 10:27</p>
+        <p>最后更新： 2018年05月14日 14:19</p>
         <p>原始链接： <a class="post-url" href="/2018/05/09/PHP/PHP项目的开发流程/" title="php项目开发流程">https://jqhee.github.io/2018/05/09/PHP/PHP项目的开发流程/</a></p>
         <footer>
             <a href="https://jqhee.github.io">
@@ -380,8 +408,8 @@
     </a>
   
   
-    <a href="/2018/05/09/PHP/拓展学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">拓展学习</span>
+    <a href="/2018/05/09/PHP/Redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Redis</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
