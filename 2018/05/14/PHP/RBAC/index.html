@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>只非鱼</title>
+  <title>RBAC 基于角色的权限访问控制 | 只非鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
   
-  <meta name="description" content="title: RBAC 基于角色的权限访问控制 #文章標題date: 2018-05-14 #文章生成時間categories: “PHP” #文章分類目錄 可以省略tags: #文章標籤 可以省略  PHPcover_picture: images/php.jpg # 列表的占位图description: #你對本頁的描述 可以省略     目录  RBAC 基于角色的权限访问控制   RBA">
+  <meta name="description" content="目录  RBAC 基于角色的权限访问控制   RBAC 基于角色的权限访问控制基本流程： 用户 -&amp;gt; 用户组 -&amp;gt; 权限（可以是多个） 数据库相关12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455-- ---------------">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="只非鱼">
+<meta property="og:title" content="RBAC 基于角色的权限访问控制">
 <meta property="og:url" content="https://jqhee.github.io/2018/05/14/PHP/RBAC/index.html">
 <meta property="og:site_name" content="只非鱼">
-<meta property="og:description" content="title: RBAC 基于角色的权限访问控制 #文章標題date: 2018-05-14 #文章生成時間categories: “PHP” #文章分類目錄 可以省略tags: #文章標籤 可以省略  PHPcover_picture: images/php.jpg # 列表的占位图description: #你對本頁的描述 可以省略     目录  RBAC 基于角色的权限访问控制   RBA">
+<meta property="og:description" content="目录  RBAC 基于角色的权限访问控制   RBAC 基于角色的权限访问控制基本流程： 用户 -&amp;gt; 用户组 -&amp;gt; 权限（可以是多个） 数据库相关12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455-- ---------------">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-14T05:57:22.027Z">
+<meta property="og:updated_time" content="2018-05-14T06:02:35.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="只非鱼">
-<meta name="twitter:description" content="title: RBAC 基于角色的权限访问控制 #文章標題date: 2018-05-14 #文章生成時間categories: “PHP” #文章分類目錄 可以省略tags: #文章標籤 可以省略  PHPcover_picture: images/php.jpg # 列表的占位图description: #你對本頁的描述 可以省略     目录  RBAC 基于角色的权限访问控制   RBA">
+<meta name="twitter:title" content="RBAC 基于角色的权限访问控制">
+<meta name="twitter:description" content="目录  RBAC 基于角色的权限访问控制   RBAC 基于角色的权限访问控制基本流程： 用户 -&amp;gt; 用户组 -&amp;gt; 权限（可以是多个） 数据库相关12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455-- ---------------">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -104,29 +105,53 @@
         <section id="main" class="body-wrap"><article id="post-PHP/RBAC" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      RBAC 基于角色的权限访问控制
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-05-14
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <hr>
-<p>title: RBAC 基于角色的权限访问控制 #文章標題<br>date: 2018-05-14 #文章生成時間<br>categories: “PHP” #文章分類目錄 可以省略<br>tags: #文章標籤 可以省略</p>
-<ul>
-<li>PHP<br>cover_picture: images/php.jpg # 列表的占位图<br>description: #你對本頁的描述 可以省略</li>
-</ul>
-<hr>
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+            <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <p><strong>目录</strong></p>
 <ul>
 <li><a href="#rbac-%E5%9F%BA%E4%BA%8E%E8%A7%92%E8%89%B2%E7%9A%84%E6%9D%83%E9%99%90%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6">RBAC 基于角色的权限访问控制</a></li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h2 id="RBAC-基于角色的权限访问控制"><a href="#RBAC-基于角色的权限访问控制" class="headerlink" title="RBAC 基于角色的权限访问控制"></a>RBAC 基于角色的权限访问控制</h2><p>基本流程： 用户 -&gt; 用户组 -&gt; 权限（可以是多个）</p>
+<h3 id="RBAC-基于角色的权限访问控制"><a href="#RBAC-基于角色的权限访问控制" class="headerlink" title="RBAC 基于角色的权限访问控制"></a>RBAC 基于角色的权限访问控制</h3><p>基本流程： 用户 -&gt; 用户组 -&gt; 权限（可以是多个）</p>
 <p>数据库相关<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">-- ----------------------------</span><br><span class="line">-- bk_auth_rule，规则表，</span><br><span class="line">-- id:主键，name：规则唯一标识, title：规则中文名称 status 状态：为1正常，为0禁用，condition：规则表达式，为空表示存在就验证，不为空表示按照条件验证</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `bk_auth_rule`;</span><br><span class="line">CREATE TABLE `bk_auth_rule` (</span><br><span class="line">`id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,</span><br><span class="line">`name` char(80) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`title` char(20) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`type` tinyint(1) NOT NULL DEFAULT &apos;1&apos;,</span><br><span class="line">`status` tinyint(1) NOT NULL DEFAULT &apos;1&apos;,</span><br><span class="line">`condition` char(100) NOT NULL DEFAULT &apos;&apos;,  # 规则附件条件,满足附加条件的规则,才认为是有效的规则</span><br><span class="line">PRIMARY KEY (`id`),</span><br><span class="line">UNIQUE KEY `name` (`name`)</span><br><span class="line">) ENGINE=MyISAM  DEFAULT CHARSET=utf8;</span><br><span class="line">-- ----------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- bk_auth_group 用户组表，</span><br><span class="line">-- id：主键， title:用户组中文名称， rules：用户组拥有的规则id， 多个规则&quot;,&quot;隔开，status 状态：为1正常，为0禁用</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `bk_auth_group`;</span><br><span class="line">CREATE TABLE `bk_auth_group` (</span><br><span class="line">`id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,</span><br><span class="line">`title` char(100) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">`status` tinyint(1) NOT NULL DEFAULT &apos;1&apos;,</span><br><span class="line">`rules` char(80) NOT NULL DEFAULT &apos;&apos;,</span><br><span class="line">PRIMARY KEY (`id`)</span><br><span class="line">) ENGINE=MyISAM  DEFAULT CHARSET=utf8;</span><br><span class="line">-- ----------------------------</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- bk_auth_group_access 用户组明细表(让管理员表与用户组表关联)</span><br><span class="line">-- uid:用户id，group_id：用户组id</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `bk_auth_group_access`;</span><br><span class="line">CREATE TABLE `bk_auth_group_access` (</span><br><span class="line">`uid` mediumint(8) unsigned NOT NULL,</span><br><span class="line">`group_id` mediumint(8) unsigned NOT NULL,</span><br><span class="line">UNIQUE KEY `uid_group_id` (`uid`,`group_id`),</span><br><span class="line">KEY `uid` (`uid`),</span><br><span class="line">KEY `group_id` (`group_id`)</span><br><span class="line">) ENGINE=MyISAM DEFAULT CHARSET=utf8;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-- bk_admin 管理员表</span><br><span class="line">-- admin_name:管理员账号，admin_password：管理员密码</span><br><span class="line">-- ----------------------------</span><br><span class="line">DROP TABLE IF EXISTS `bk_admin`;</span><br><span class="line">CREATE TABLE `bk_admin` (</span><br><span class="line">`id` int(11) unsigned NOT NULL AUTO_INCREMENT,</span><br><span class="line">`admin_name` varchar(50)  NOT NULL,</span><br><span class="line">`admin_password` varchar(50) NOT NULL,</span><br><span class="line">PRIMARY KEY(id)</span><br><span class="line">) ENGINE=MyISAM DEFAULT CHARSET=utf8;</span><br></pre></td></tr></table></figure></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年05月14日 13:57</p>
-        <p>原始链接： <a class="post-url" href="/2018/05/14/PHP/RBAC/" title="">https://jqhee.github.io/2018/05/14/PHP/RBAC/</a></p>
+        <p>最后更新： 2018年05月14日 14:02</p>
+        <p>原始链接： <a class="post-url" href="/2018/05/14/PHP/RBAC/" title="RBAC 基于角色的权限访问控制">https://jqhee.github.io/2018/05/14/PHP/RBAC/</a></p>
         <footer>
             <a href="https://jqhee.github.io">
                 <img src="/images/logo.png" alt="hjq">
@@ -147,6 +172,13 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -156,7 +188,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RBAC-基于角色的权限访问控制"><span class="post-toc-text">RBAC 基于角色的权限访问控制</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RBAC-基于角色的权限访问控制"><span class="post-toc-text">RBAC 基于角色的权限访问控制</span></a></li></ol>
         </nav>
     </aside>
     
