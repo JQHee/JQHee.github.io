@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
   
-  <meta name="description" content="目录   一、www（why + what + how） 二、编程思想  1. oop思想 2. mvc模式【思想】   三、项目的搭建  1.项目结构   四、编码规范  五、TP框架 六、开启Smarty模板引擎 七、数据库操作Model模型文件 八、数据上录处理 九、执行原生sql语句 十、注册页面，表单验证 十一、验证码 十二、附件上传 十三、数据分页 十四、登录功能 十五、RBAC">
+  <meta name="description" content="目录   一、www（why + what + how） 二、编程思想 1. oop思想 2. mvc模式【思想】   三、项目的搭建 1.项目结构   四、编码规范 五、TP框架 六、开启Smarty模板引擎 七、数据库操作Model模型文件 八、数据上录处理 九、执行原生sql语句 十、注册页面，表单验证 十一、验证码 十二、附件上传 十三、数据分页 十四、登录功能 十五、RBAC 十六、">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="php项目开发流程">
 <meta property="og:url" content="https://jqhee.github.io/2018/05/09/PHP/PHP项目的开发流程/index.html">
 <meta property="og:site_name" content="只非鱼">
-<meta property="og:description" content="目录   一、www（why + what + how） 二、编程思想  1. oop思想 2. mvc模式【思想】   三、项目的搭建  1.项目结构   四、编码规范  五、TP框架 六、开启Smarty模板引擎 七、数据库操作Model模型文件 八、数据上录处理 九、执行原生sql语句 十、注册页面，表单验证 十一、验证码 十二、附件上传 十三、数据分页 十四、登录功能 十五、RBAC">
+<meta property="og:description" content="目录   一、www（why + what + how） 二、编程思想 1. oop思想 2. mvc模式【思想】   三、项目的搭建 1.项目结构   四、编码规范 五、TP框架 六、开启Smarty模板引擎 七、数据库操作Model模型文件 八、数据上录处理 九、执行原生sql语句 十、注册页面，表单验证 十一、验证码 十二、附件上传 十三、数据分页 十四、登录功能 十五、RBAC 十六、">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-14T06:23:46.255Z">
+<meta property="og:updated_time" content="2018-05-14T06:36:51.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php项目开发流程">
-<meta name="twitter:description" content="目录   一、www（why + what + how） 二、编程思想  1. oop思想 2. mvc模式【思想】   三、项目的搭建  1.项目结构   四、编码规范  五、TP框架 六、开启Smarty模板引擎 七、数据库操作Model模型文件 八、数据上录处理 九、执行原生sql语句 十、注册页面，表单验证 十一、验证码 十二、附件上传 十三、数据分页 十四、登录功能 十五、RBAC">
+<meta name="twitter:description" content="目录   一、www（why + what + how） 二、编程思想 1. oop思想 2. mvc模式【思想】   三、项目的搭建 1.项目结构   四、编码规范 五、TP框架 六、开启Smarty模板引擎 七、数据库操作Model模型文件 八、数据上录处理 九、执行原生sql语句 十、注册页面，表单验证 十一、验证码 十二、附件上传 十三、数据分页 十四、登录功能 十五、RBAC 十六、">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -143,19 +143,16 @@
 <p><strong>目录</strong> </p>
 <ul>
 <li><a href="#%E4%B8%80wwwwhy--what--how">一、www（why + what + how）</a></li>
-<li><p><a href="#%E4%BA%8C%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3">二、编程思想</a></p>
-<ul>
+<li><a href="#%E4%BA%8C%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3">二、编程思想</a><ul>
 <li><a href="#1-oop%E6%80%9D%E6%83%B3">1. oop思想</a></li>
 <li><a href="#2-mvc%E6%A8%A1%E5%BC%8F%E6%80%9D%E6%83%B3">2. mvc模式【思想】</a></li>
 </ul>
 </li>
-<li><p><a href="#%E4%B8%89%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%90%AD%E5%BB%BA">三、项目的搭建</a></p>
-<ul>
+<li><a href="#%E4%B8%89%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%90%AD%E5%BB%BA">三、项目的搭建</a><ul>
 <li><a href="#1%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">1.项目结构</a></li>
 </ul>
 </li>
-<li><p><a href="#%E5%9B%9B%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">四、编码规范</a></p>
-</li>
+<li><a href="#%E5%9B%9B%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83">四、编码规范</a></li>
 <li><a href="#%E4%BA%94tp%E6%A1%86%E6%9E%B6">五、TP框架</a></li>
 <li><a href="#%E5%85%AD%E5%BC%80%E5%90%AFsmarty%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E">六、开启Smarty模板引擎</a></li>
 <li><a href="#%E4%B8%83%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9Cmodel%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6">七、数据库操作Model模型文件</a></li>
@@ -356,7 +353,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年05月14日 14:23</p>
+        <p>最后更新： 2018年05月14日 14:36</p>
         <p>原始链接： <a class="post-url" href="/2018/05/09/PHP/PHP项目的开发流程/" title="php项目开发流程">https://jqhee.github.io/2018/05/09/PHP/PHP项目的开发流程/</a></p>
         <footer>
             <a href="https://jqhee.github.io">
