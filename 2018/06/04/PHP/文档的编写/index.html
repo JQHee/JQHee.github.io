@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>文档的编写 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="一、apidoc0.安装 apidoc1npm install apidoc -g 1.依赖于nodejs的环境安装nodejs 2.在根目录下新增apidoc.json,内容如下：1234567&amp;#123;    &amp;quot;name&amp;quot;: &amp;quot;example&amp;quot;,    &amp;quot;version&amp;quot;: &amp;quot;0.1.0&amp;quot;,    &amp;quot;d">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文档的编写">
+<meta property="og:url" content="https://jqhee.github.io/2018/06/04/PHP/文档的编写/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="一、apidoc0.安装 apidoc1npm install apidoc -g 1.依赖于nodejs的环境安装nodejs 2.在根目录下新增apidoc.json,内容如下：1234567&amp;#123;    &amp;quot;name&amp;quot;: &amp;quot;example&amp;quot;,    &amp;quot;version&amp;quot;: &amp;quot;0.1.0&amp;quot;,    &amp;quot;d">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-04T01:58:43.218Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="文档的编写">
+<meta name="twitter:description" content="一、apidoc0.安装 apidoc1npm install apidoc -g 1.依赖于nodejs的环境安装nodejs 2.在根目录下新增apidoc.json,内容如下：1234567&amp;#123;    &amp;quot;name&amp;quot;: &amp;quot;example&amp;quot;,    &amp;quot;version&amp;quot;: &amp;quot;0.1.0&amp;quot;,    &amp;quot;d">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/文档的编写" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      文档的编写
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-06-04
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="一、apidoc"><a href="#一、apidoc" class="headerlink" title="一、apidoc"></a>一、apidoc</h3><h4 id="0-安装-apidoc"><a href="#0-安装-apidoc" class="headerlink" title="0.安装 apidoc"></a>0.安装 apidoc</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install apidoc -g</span><br></pre></td></tr></table></figure>
+<h4 id="1-依赖于nodejs的环境"><a href="#1-依赖于nodejs的环境" class="headerlink" title="1.依赖于nodejs的环境"></a>1.依赖于nodejs的环境</h4><p>安装nodejs</p>
+<h4 id="2-在根目录下新增apidoc-json-内容如下："><a href="#2-在根目录下新增apidoc-json-内容如下：" class="headerlink" title="2.在根目录下新增apidoc.json,内容如下："></a>2.在根目录下新增apidoc.json,内容如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;example&quot;,</span><br><span class="line">    &quot;version&quot;: &quot;0.1.0&quot;,</span><br><span class="line">    &quot;description&quot;: &quot;apiDoc basic example&quot;,</span><br><span class="line">    &quot;title&quot;: &quot;Custom apiDoc browser title&quot;,</span><br><span class="line">    &quot;url&quot; : &quot;https://api.github.com/v1&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="3-使用命令生成文档"><a href="#3-使用命令生成文档" class="headerlink" title="3.使用命令生成文档"></a>3.使用命令生成文档</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apidoc -i myapp/ -o apidoc/</span><br></pre></td></tr></table></figure>
+<h4 id="4-解决中文不兼容的问题"><a href="#4-解决中文不兼容的问题" class="headerlink" title="4.解决中文不兼容的问题"></a>4.解决中文不兼容的问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">目录下：/usr/local/lib/node_modules/apidoc/node_modules/apidoc-core/lib/workers/api_group.js</span><br><span class="line">注释：</span><br><span class="line">//group = group.replace(/[^\w]/g, &apos;_&apos;);</span><br></pre></td></tr></table></figure>
+<h4 id="5-基本demo"><a href="#5-基本demo" class="headerlink" title="5.基本demo"></a>5.基本demo</h4><p>test.php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php  </span><br><span class="line">  </span><br><span class="line">/**</span><br><span class="line">     * @api &#123;POST&#125; ?p=apiAgentRecord&amp;a=getMemberList   获取会员记录列表</span><br><span class="line">     * @apiVersion      1.0.0</span><br><span class="line">     * @apiName         getMemberList</span><br><span class="line">     * @apiGroup        用户类</span><br><span class="line">     * @apiPermission  登录后</span><br><span class="line">     *</span><br><span class="line">     * @apiDescription  获取会员记录列表</span><br><span class="line">     *</span><br><span class="line">     * @apiParam   &#123;Number&#125;   page                          页数，默认为 1</span><br><span class="line">     * @apiParam   &#123;String&#125;   pageSize                      每页条数，默认为 5</span><br><span class="line">     * @apiParam   &#123;String&#125;   searchData                    关键字，默认为&apos;&apos;</span><br><span class="line">     *</span><br><span class="line">     * @apiSuccess &#123;Number&#125;   rank_name                     会员等级名称</span><br><span class="line">     * @apiSuccess &#123;String&#125;   user_id                       会员ID</span><br><span class="line">     * @apiSuccess &#123;String&#125;   mobile                        手机号码</span><br><span class="line">     * @apiSuccess &#123;String&#125;   user_name                     会员账号</span><br><span class="line">     * @apiSuccess &#123;String&#125;   nick_name                     会员昵称</span><br><span class="line">     * @apiSuccess &#123;String&#125;   sex                           会员昵称性别</span><br><span class="line">     * @apiSuccess &#123;String&#125;   user_rank                     会员等级</span><br><span class="line">     * @apiSuccess &#123;String&#125;   rank_changeTime               用户等级修改时间</span><br><span class="line">     * @apiSuccess &#123;String&#125;   MemberTime                    首次购买会员时间</span><br><span class="line">     * @apiSuccess &#123;String&#125;   MemberMoney                   首次购买会籍费用</span><br><span class="line">     * @apiSuccess &#123;String&#125;   realname                      真实姓名</span><br><span class="line">     * @apiSuccess &#123;String&#125;   rank_status                   月份,默认为0</span><br><span class="line">     * @apiSuccess &#123;String&#125;   reg_time                      注册时间</span><br><span class="line">     * @apiSuccess &#123;String&#125;   AgentID                       代理ID</span><br><span class="line">     * @apiSuccess &#123;String&#125;   AgentCode                     加盟编码</span><br><span class="line">     * @apiSuccess &#123;String&#125;   IntroduceUserName             介绍人姓名</span><br><span class="line">     *</span><br><span class="line">     * @apiSuccessExample  &#123;json&#125; Response (success):</span><br><span class="line">     * &#123;</span><br><span class="line">     *    &quot;status&quot;:0,</span><br><span class="line">     *    &quot;msg&quot;:&quot;获取会员记录成功！&quot;,</span><br><span class="line">     *    &quot;data&quot;:[</span><br><span class="line">     *        &#123;</span><br><span class="line">     *            &quot;rank_name&quot;:&quot;男爵会员&quot;,</span><br><span class="line">     *            &quot;user_id&quot;:&quot;00002151&quot;,</span><br><span class="line">     *            &quot;mobile&quot;:&quot;18820698877&quot;,</span><br><span class="line">     *            &quot;user_name&quot;:&quot;18820698877&quot;,</span><br><span class="line">     *            &quot;nick_name&quot;:&quot;1882069887&quot;,</span><br><span class="line">     *            &quot;sex&quot;:&quot;1&quot;,</span><br><span class="line">     *            &quot;user_rank&quot;:&quot;3&quot;,</span><br><span class="line">     *            &quot;rank_changeTime&quot;:&quot;1489397095&quot;,</span><br><span class="line">     *            &quot;MemberTime&quot;:&quot;2017-03-13 17:24:55&quot;,</span><br><span class="line">     *            &quot;MemberMoney&quot;:&quot;10000.00&quot;,</span><br><span class="line">     *            &quot;realname&quot;:&quot;钟今铎&quot;,</span><br><span class="line">     *            &quot;rank_status&quot;:&quot;1&quot;,</span><br><span class="line">     *            &quot;reg_time&quot;:&quot;2016-12-23 14:39:37&quot;,</span><br><span class="line">     *            &quot;AgentID&quot;:&quot;16&quot;,</span><br><span class="line">     *            &quot;AgentCode&quot;:&quot;N915&quot;,</span><br><span class="line">     *            &quot;IntroduceUserName&quot;:&quot;&quot;</span><br><span class="line">     *        &#125;</span><br><span class="line">     *    ],</span><br><span class="line">     *    &quot;total&quot;:1</span><br><span class="line">     * &#125;</span><br><span class="line">     *</span><br><span class="line">     * @apiErrorExample  &#123;json&#125; Response (error):</span><br><span class="line">     * &#123;</span><br><span class="line">     *    &quot;status&quot;:1,</span><br><span class="line">     *    &quot;msg&quot;:&quot;您暂无会员会籍记录！&quot;,</span><br><span class="line">     *    &quot;data&quot;:&quot;&quot;,</span><br><span class="line">     *    &quot;total&quot;:0</span><br><span class="line">     * &#125;</span><br><span class="line">     */</span><br></pre></td></tr></table></figure></p>
+<h3 id="一、showdoc"><a href="#一、showdoc" class="headerlink" title="一、showdoc"></a>一、showdoc</h3><p>网址：<a href="https://www.showdoc.cc/web/#/" target="_blank" rel="noopener">https://www.showdoc.cc/web/#/</a></p>
+<h4 id="1-接口文档说明"><a href="#1-接口文档说明" class="headerlink" title="1.接口文档说明"></a>1.接口文档说明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">**简要描述：** </span><br><span class="line"></span><br><span class="line">- 用户注册接口</span><br><span class="line"></span><br><span class="line">**请求URL：** </span><br><span class="line">- ` http://xx.com/api/user/register `</span><br><span class="line">  </span><br><span class="line">**请求方式：**</span><br><span class="line">- POST </span><br><span class="line"></span><br><span class="line">**参数：** </span><br><span class="line"></span><br><span class="line">|参数名|必选|类型|说明|</span><br><span class="line">|:----    |:---|:----- |-----   |</span><br><span class="line">|username |是  |string |用户名   |</span><br><span class="line">|password |是  |string | 密码    |</span><br><span class="line">|name     |否  |string | 昵称    |</span><br><span class="line"></span><br><span class="line"> **返回示例**</span><br><span class="line">#``` </span><br><span class="line">  &#123;</span><br><span class="line">    &quot;error_code&quot;: 0,</span><br><span class="line">    &quot;data&quot;: &#123;</span><br><span class="line">      &quot;uid&quot;: &quot;1&quot;,</span><br><span class="line">      &quot;username&quot;: &quot;12154545&quot;,</span><br><span class="line">      &quot;name&quot;: &quot;吴系挂&quot;,</span><br><span class="line">      &quot;groupid&quot;: 2 ,</span><br><span class="line">      &quot;reg_time&quot;: &quot;1436864169&quot;,</span><br><span class="line">      &quot;last_login_time&quot;: &quot;0&quot;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+<p> <strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名</th>
+<th style="text-align:left">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">groupid</td>
+<td style="text-align:left">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>备注</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.数据表说明</span><br><span class="line">```  </span><br><span class="line">-  用户表，储存用户信息</span><br><span class="line"></span><br><span class="line">|字段|类型|空|默认|注释|</span><br><span class="line">|:----    |:-------    |:--- |-- -|------      |</span><br><span class="line">|uid      |int(10)     |否   |    |            |</span><br><span class="line">|username |varchar(20) |否   |    |   用户名    |</span><br><span class="line">|password |varchar(50) |否   |    |   密码      |</span><br><span class="line">|name     |varchar(15) |是   |    |    昵称     |</span><br><span class="line">|reg_time |int(11)     |否   | 0  |   注册时间   |</span><br><span class="line"></span><br><span class="line">- 备注：无</span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年06月04日 09:58</p>
+        <p>原始链接： <a class="post-url" href="/2018/06/04/PHP/文档的编写/" title="文档的编写">https://jqhee.github.io/2018/06/04/PHP/文档的编写/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、apidoc"><span class="post-toc-text">一、apidoc</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#0-安装-apidoc"><span class="post-toc-text">0.安装 apidoc</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-依赖于nodejs的环境"><span class="post-toc-text">1.依赖于nodejs的环境</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-在根目录下新增apidoc-json-内容如下："><span class="post-toc-text">2.在根目录下新增apidoc.json,内容如下：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-使用命令生成文档"><span class="post-toc-text">3.使用命令生成文档</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-解决中文不兼容的问题"><span class="post-toc-text">4.解决中文不兼容的问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-基本demo"><span class="post-toc-text">5.基本demo</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、showdoc"><span class="post-toc-text">一、showdoc</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-接口文档说明"><span class="post-toc-text">1.接口文档说明</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/14/PHP/RBAC/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">RBAC 基于角色的权限访问控制</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
