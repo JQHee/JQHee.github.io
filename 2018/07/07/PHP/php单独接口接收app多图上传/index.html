@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>PHP单独接口接收app多图上传 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="PHP单独接口接收app多图上传在使用php接收app多图上传时，app是通过拼接表单的方式上传的，所以在php端接收的时候，和接收网页的表单的方式是有区别的： 1.接收文件1234567891011121314151617function buildInfo()&amp;#123;  $i = 0;  $info = null;  foreach ($_FILES as $v)&amp;#123;//三维数组转">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP单独接口接收app多图上传">
+<meta property="og:url" content="https://jqhee.github.io/2018/07/07/PHP/php单独接口接收app多图上传/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="PHP单独接口接收app多图上传在使用php接收app多图上传时，app是通过拼接表单的方式上传的，所以在php端接收的时候，和接收网页的表单的方式是有区别的： 1.接收文件1234567891011121314151617function buildInfo()&amp;#123;  $i = 0;  $info = null;  foreach ($_FILES as $v)&amp;#123;//三维数组转">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-09T09:45:09.656Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP单独接口接收app多图上传">
+<meta name="twitter:description" content="PHP单独接口接收app多图上传在使用php接收app多图上传时，app是通过拼接表单的方式上传的，所以在php端接收的时候，和接收网页的表单的方式是有区别的： 1.接收文件1234567891011121314151617function buildInfo()&amp;#123;  $i = 0;  $info = null;  foreach ($_FILES as $v)&amp;#123;//三维数组转">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/php单独接口接收app多图上传" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      PHP单独接口接收app多图上传
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-07
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="PHP单独接口接收app多图上传"><a href="#PHP单独接口接收app多图上传" class="headerlink" title="PHP单独接口接收app多图上传"></a>PHP单独接口接收app多图上传</h1><p>在使用php接收app多图上传时，app是通过拼接表单的方式上传的，所以在php端接收的时候，和接收网页的表单的方式是有区别的：</p>
+<p>1.接收文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function buildInfo()&#123;</span><br><span class="line">  $i = 0;</span><br><span class="line">  $info = null;</span><br><span class="line">  foreach ($_FILES as $v)&#123;//三维数组转换成2维数组</span><br><span class="line">  if(is_string($v[&apos;name&apos;]))&#123; //单文件上传</span><br><span class="line">  $info[$i] = $v;</span><br><span class="line">  $i++;</span><br><span class="line">  //halt($v);</span><br><span class="line">  &#125;else&#123; // 多文件上传</span><br><span class="line">  foreach ($v[&apos;name&apos;] as $key=&gt;$val)&#123;//2维数组转换成1维数组</span><br><span class="line"> //取出一维数组的值，然后形成另一个数组 //新的数组的结构为：info=&gt;i=&gt;(&apos;name&apos;,&apos;size&apos;.....)  $info[$i][&apos;name&apos;] = $v[&apos;name&apos;][$key];</span><br><span class="line">  $info[$i][&apos;size&apos;] = $v[&apos;size&apos;][$key];</span><br><span class="line">  $info[$i][&apos;type&apos;] = $v[&apos;type&apos;][$key];</span><br><span class="line">  $info[$i][&apos;tmp_name&apos;] = $v[&apos;tmp_name&apos;][$key];</span><br><span class="line">  $info[$i][&apos;error&apos;] = $v[&apos;error&apos;][$key];</span><br><span class="line">  $i++;</span><br><span class="line"> &#125; &#125; &#125;  return $info; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.文件上传<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">function uploadfile($path=&quot;uploads&quot;,</span><br><span class="line">  $allowExt = array(&apos;png&apos;,&apos;jpg&apos;,&apos;jpeg&apos;,&apos;gif&apos;,&apos;mmp&apos;,&apos;qnmlgb&apos;),</span><br><span class="line">  $maxSize=1048576,$imgFlag=true)&#123;    if (! file_exists($path)) &#123;</span><br><span class="line">  mkdir($path,0777,true);</span><br><span class="line"> &#125;  $i = 0;</span><br><span class="line">  $infoArr = $this -&gt; buildInfo();</span><br><span class="line">  $h = null;</span><br><span class="line">  foreach ($infoArr as $val) &#123;</span><br><span class="line">  if ($val[&apos;error&apos;] === UPLOAD_ERR_OK) &#123;    $ext = $this -&gt; getExt($val[&apos;name&apos;]);</span><br><span class="line">  for($j=0;$j&lt;count($allowExt);$j++)&#123;</span><br><span class="line">  if($ext == $allowExt[$j])&#123;</span><br><span class="line">  $m = &quot;此文件适合上传标准&quot;;</span><br><span class="line">  $h = $m;</span><br><span class="line"> &#125;else &#123;</span><br><span class="line">  $m = &quot;此文件不可以被上传&quot;;</span><br><span class="line"> &#125; &#125;  if($h)&#123;</span><br><span class="line">  $mes = &quot;文件格式正确&quot;;</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">  $mes = &quot;文件格式错误&quot;;</span><br><span class="line">  exit;</span><br><span class="line"> &#125;  if($val[&apos;size&apos;]&gt;$maxSize)&#123;</span><br><span class="line">  $mes = &quot;文件太大了&quot;;</span><br><span class="line">  exit;</span><br><span class="line"> &#125;  if($imgFlag)&#123;</span><br><span class="line">  $result = getimagesize($val[&apos;tmp_name&apos;]);</span><br><span class="line">  if(!$result)&#123;</span><br><span class="line">  $mes = &quot;您上传的不是一个真正图片&quot;;</span><br><span class="line">  exit;</span><br><span class="line"> &#125; &#125;  if(!is_uploaded_file($val[&apos;tmp_name&apos;]))&#123;</span><br><span class="line">  $mes = &quot;不是通过httppost传输的&quot;;</span><br><span class="line">  exit;</span><br><span class="line"> &#125;    $realName = $i.&quot;.&quot;.$ext;</span><br><span class="line">  $destination = $path.&quot;/&quot;.$realName;</span><br><span class="line">  if(move_uploaded_file($val[&apos;tmp_name&apos;], $destination))&#123;</span><br><span class="line">  $val[&apos;name&apos;] = $realName;</span><br><span class="line">  unset($val[&apos;error&apos;],$val[&apos;tmp_name&apos;],$val[&apos;size&apos;],$val[&apos;type&apos;]);    $uploadedFiles[$i]=$val;</span><br><span class="line">  $i++;</span><br><span class="line">  //var_dump(&quot;上传成功&quot;);</span><br><span class="line">  &#125;   &#125;else &#123;</span><br><span class="line">  switch ($val[&apos;error&apos;]) &#123;</span><br><span class="line">  case 1: // UPLOAD_ERR_INI_SIZE</span><br><span class="line">  $mes = &quot;超过配置文件中上传文件的大小&quot;;</span><br><span class="line">  break;</span><br><span class="line">  case 2: // UPLOAD_ERR_FORM_SIZE</span><br><span class="line">  $mes = &quot;超过表单中配置文件的大小&quot;;</span><br><span class="line">  break;</span><br><span class="line">  case 3: // UPLOAD_ERR_PARTIAL</span><br><span class="line">  $mes = &quot;文件被部分上传&quot;;</span><br><span class="line">  break;</span><br><span class="line">  case 4: // UPLOAD_ERR_NO_FILE</span><br><span class="line">  $mes = &quot;没有文件被上传&quot;;</span><br><span class="line">  break;</span><br><span class="line">  case 6: // UPLOAD_ERR_NO_TMP_DIR</span><br><span class="line">  $mes = &quot;没有找到临事文件目录&quot;;</span><br><span class="line">  break;</span><br><span class="line">  case 7: // UPLOAD_ERR_CANT_WRITE</span><br><span class="line">  $mes = &quot;文件不可写&quot;;</span><br><span class="line">  break;</span><br><span class="line">  case 8: // UPLOAD_ERR_EXTENSION</span><br><span class="line">  $mes = &quot;php扩展程序中断了上传程序&quot;;</span><br><span class="line">  break;</span><br><span class="line"> &#125;  echo $mes;</span><br><span class="line"> &#125; &#125;    return $uploadedFiles; &#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.获取文件的拓展名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 得到文件的扩展名 * @param unknown $fileName</span><br><span class="line"> * @return string</span><br><span class="line"> */ function getExt($fileName)&#123;</span><br><span class="line">  //halt($fileName);</span><br><span class="line">  $nameArray = explode(&apos;.&apos;,$fileName);</span><br><span class="line">  return strtolower($nameArray[1]);</span><br><span class="line">  // strtolower(end(explode(&apos;.&apos;,$fileName)));</span><br><span class="line"> /** * strtolower() 函数把字符串转换为小写。 * end()输出数组中最后一个元素的值 * explode(),拆分字符串 */ &#125;</span><br></pre></td></tr></table></figure>
+<p>4.测试的html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;form action=&quot;&#123;:url(&apos;admin/upload&apos;)&#125;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;file&quot; name=&quot;myFile[]&quot; multiple=&quot;multiple&quot; /&gt;&lt;br&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot; value=&quot;上传&quot;/&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月09日 17:45</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/07/PHP/php单独接口接收app多图上传/" title="PHP单独接口接收app多图上传">https://jqhee.github.io/2018/07/07/PHP/php单独接口接收app多图上传/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/PHP/" class="color4">PHP</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#PHP单独接口接收app多图上传"><span class="post-toc-text">PHP单独接口接收app多图上传</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/07/09/PHP/UICollectionViewCell自适应大小/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          UICollectionViewCell自适应大小
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/06/04/PHP/文档的编写/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">文档的编写</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a><a class="category-link" href="/categories/Swift/">Swift</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>

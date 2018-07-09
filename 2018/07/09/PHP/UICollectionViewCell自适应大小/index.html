@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>UICollectionViewCell自适应大小 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="UICollectionViewCell自适应大小1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UICollectionViewCell自适应大小">
+<meta property="og:url" content="https://jqhee.github.io/2018/07/09/PHP/UICollectionViewCell自适应大小/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="UICollectionViewCell自适应大小1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-09T09:47:20.356Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UICollectionViewCell自适应大小">
+<meta name="twitter:description" content="UICollectionViewCell自适应大小1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/UICollectionViewCell自适应大小" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      UICollectionViewCell自适应大小
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Swift/">Swift</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-09
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="UICollectionViewCell自适应大小"><a href="#UICollectionViewCell自适应大小" class="headerlink" title="UICollectionViewCell自适应大小"></a>UICollectionViewCell自适应大小</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">import UIKit</span><br><span class="line">import SnapKit</span><br><span class="line"></span><br><span class="line">class ProductCollectionViewCell: UICollectionViewCell &#123;</span><br><span class="line">    </span><br><span class="line">    // MARK: - 公共属性</span><br><span class="line">    var product: String! &#123;</span><br><span class="line">        didSet &#123;</span><br><span class="line">            self.productImageView.image = UIImage(named: &quot; &quot;)</span><br><span class="line">            self.contentLabel.text = &quot;测试文本&quot;</span><br><span class="line">            self.priceLabel.text = &quot;¥\(100)&quot;</span><br><span class="line">            self.salesLabel.text = &quot;\(1000)人购买&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // MARK: - 生命周期及方法覆盖</span><br><span class="line">    override init(frame: CGRect) &#123;</span><br><span class="line">        super.init(frame: frame)</span><br><span class="line">        self.setup()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    required init?(coder aDecoder: NSCoder) &#123;</span><br><span class="line">        super.init(coder: aDecoder)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -&gt; UICollectionViewLayoutAttributes &#123;</span><br><span class="line">        return super.preferredLayoutAttributesFitting(layoutAttributes)</span><br><span class="line">    &#125;</span><br><span class="line">    // MARK: - 私有方法</span><br><span class="line">    private func setup() &#123;</span><br><span class="line">        self.backgroundColor = UIColor.white</span><br><span class="line">        self.contentView.addSubview(self.productImageView)</span><br><span class="line">        self.contentView.addSubview(self.contentLabel)</span><br><span class="line">        self.contentView.addSubview(self.priceLabel)</span><br><span class="line">        self.contentView.addSubview(self.salesLabel)</span><br><span class="line">        </span><br><span class="line">        let screenWidth = UIScreen.main.bounds.width</span><br><span class="line">        self.productImageView.snp.makeConstraints &#123; (make) in</span><br><span class="line">            make.top.left.right.equalTo(0.0)</span><br><span class="line">            make.height.equalTo(screenWidth*0.5).priority(999)</span><br><span class="line">            make.width.equalTo((screenWidth-10)*0.5).priority(999) // 此设置可以确定cell宽度,注意尽管降低了默认的优先级仅仅是为了计算中间步骤不至于约束冲突，最终显示时此约束仍然会生效</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        self.contentLabel.snp.makeConstraints &#123; (make) in</span><br><span class="line">            make.top.equalTo(self.productImageView.snp.bottom).offset(4.0)</span><br><span class="line">            make.left.equalTo(8.0)</span><br><span class="line">            make.right.equalTo(-8.0)</span><br><span class="line">            make.height.equalTo(28.0)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        self.priceLabel.snp.makeConstraints &#123; (make) in</span><br><span class="line">            make.top.equalTo(self.contentLabel.snp.bottom).offset(8.0)</span><br><span class="line">            make.left.equalTo(self.contentLabel.snp.left)</span><br><span class="line">            make.bottom.equalTo(-8.0) //此设置可以确定cell高度</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        self.salesLabel.snp.makeConstraints &#123; (make) in</span><br><span class="line">            make.centerY.equalTo(self.priceLabel.snp.centerY)</span><br><span class="line">            make.right.equalTo(-8.0)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // MARK: - 私有属性</span><br><span class="line">    private lazy var productImageView:UIImageView = &#123;</span><br><span class="line">        let temp = UIImageView()</span><br><span class="line">        temp.contentMode = .scaleAspectFit</span><br><span class="line">        temp.backgroundColor = UIColor.red</span><br><span class="line">        temp.clipsToBounds = true</span><br><span class="line">        return temp</span><br><span class="line">    &#125;()</span><br><span class="line">    </span><br><span class="line">    private lazy var contentLabel:UILabel = &#123;</span><br><span class="line">        let temp = UILabel()</span><br><span class="line">        temp.textColor = UIColor(red: 50.0/255.0, green: 50.0/255.0, blue: 50.0/255.0, alpha: 1.0)</span><br><span class="line">        temp.font = UIFont.systemFont(ofSize: 12.0)</span><br><span class="line">        temp.numberOfLines = 2</span><br><span class="line">        return temp</span><br><span class="line">    &#125;()</span><br><span class="line">    </span><br><span class="line">    private lazy var priceLabel:UILabel = &#123;</span><br><span class="line">        let temp = UILabel()</span><br><span class="line">        temp.textColor = UIColor.orange</span><br><span class="line">        temp.font = UIFont.systemFont(ofSize: 14.0)</span><br><span class="line">        return temp</span><br><span class="line">    &#125;()</span><br><span class="line">    </span><br><span class="line">    private lazy var salesLabel:UILabel = &#123;</span><br><span class="line">        let temp = UILabel()</span><br><span class="line">        temp.textColor = UIColor(red: 150.0/255.0, green: 150.0/255.0, blue: 150.0/255.0, alpha: 1.0)</span><br><span class="line">        temp.font = UIFont.systemFont(ofSize: 12.0)</span><br><span class="line">        return temp</span><br><span class="line">    &#125;()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func setupCollectionView() &#123;</span><br><span class="line">    let layout = UICollectionViewFlowLayout()</span><br><span class="line">    layout.scrollDirection = .vertical</span><br><span class="line">    layout.minimumLineSpacing = 0</span><br><span class="line">    layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width * 0.5, height: 95.0)</span><br><span class="line">    layout.itemSize = UICollectionViewFlowLayoutAutomaticSize</span><br><span class="line">    collectionView.setCollectionViewLayout(layout, animated: true)</span><br><span class="line">    collectionView.dataSource = self</span><br><span class="line">    collectionView.register(ProductCollectionViewCell.self, forCellWithReuseIdentifier: &quot;ProductCollectionViewCell&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月09日 17:47</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/09/PHP/UICollectionViewCell自适应大小/" title="UICollectionViewCell自适应大小">https://jqhee.github.io/2018/07/09/PHP/UICollectionViewCell自适应大小/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/Swift/" class="color1">Swift</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#UICollectionViewCell自适应大小"><span class="post-toc-text">UICollectionViewCell自适应大小</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/07/PHP/php单独接口接收app多图上传/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">PHP单独接口接收app多图上传</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a><a class="category-link" href="/categories/Swift/">Swift</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
