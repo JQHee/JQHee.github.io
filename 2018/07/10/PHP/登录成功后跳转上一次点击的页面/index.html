@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>登录成功后跳转上一次点击的页面 | 只非鱼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
+  
+  <meta name="description" content="登录成功后跳转上一次点击的页面起源：在使用的app的时候，有些业务是需要登录才可以查看的。为了更好的用户体验，我总结了一下我的实现思路：  1、 定义全局变量（或者用单例、或使用本地缓存的方式）用来保存登录状态。  2、判断是否已经登录了，如果已经登录了，跳转对应的的业务模块，如果未登录：  2.1 在当前的控制中添加一个变量，记录当前是否有添加通知，并且可以方便移除 2.2 定义一个全局的枚举，">
+<meta name="keywords" content="objective-C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="登录成功后跳转上一次点击的页面">
+<meta property="og:url" content="https://jqhee.github.io/2018/07/10/PHP/登录成功后跳转上一次点击的页面/index.html">
+<meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="登录成功后跳转上一次点击的页面起源：在使用的app的时候，有些业务是需要登录才可以查看的。为了更好的用户体验，我总结了一下我的实现思路：  1、 定义全局变量（或者用单例、或使用本地缓存的方式）用来保存登录状态。  2、判断是否已经登录了，如果已经登录了，跳转对应的的业务模块，如果未登录：  2.1 在当前的控制中添加一个变量，记录当前是否有添加通知，并且可以方便移除 2.2 定义一个全局的枚举，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-10T05:57:46.625Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="登录成功后跳转上一次点击的页面">
+<meta name="twitter:description" content="登录成功后跳转上一次点击的页面起源：在使用的app的时候，有些业务是需要登录才可以查看的。为了更好的用户体验，我总结了一下我的实现思路：  1、 定义全局变量（或者用单例、或使用本地缓存的方式）用来保存登录状态。  2、判断是否已经登录了，如果已经登录了，跳转对应的的业务模块，如果未登录：  2.1 在当前的控制中添加一个变量，记录当前是否有添加通知，并且可以方便移除 2.2 定义一个全局的枚举，">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">只非鱼博客</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        只非鱼博客
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 全栈 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="首页"  href="//jqhee.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/JQHee">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="微博" target="_blank" href="//weibo.com/u/3173517645">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-PHP/登录成功后跳转上一次点击的页面" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      登录成功后跳转上一次点击的页面
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/objective-C/">objective-C</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-10
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h1 id="登录成功后跳转上一次点击的页面"><a href="#登录成功后跳转上一次点击的页面" class="headerlink" title="登录成功后跳转上一次点击的页面"></a>登录成功后跳转上一次点击的页面</h1><p>起源：在使用的app的时候，有些业务是需要登录才可以查看的。<br>为了更好的用户体验，我总结了一下我的实现思路：</p>
+<ul>
+<li><p>1、 定义全局变量（或者用单例、或使用本地缓存的方式）用来保存登录状态。</p>
+</li>
+<li><p>2、判断是否已经登录了，如果已经登录了，跳转对应的的业务模块，如果未登录：</p>
+<ul>
+<li>2.1 在当前的控制中添加一个变量，记录当前是否有添加通知，并且可以方便移除</li>
+<li>2.2 定义一个全局的枚举，保存通知的name值</li>
+<li>2.3 在添加通知的时候，先移除上一次添加的通知（否则会重复添加），添加这一通知的意义就是在登录成功后，可以发通知告诉当前页面已经登录，可以跳转上一次想跳转的页面了。</li>
+</ul>
+</li>
+</ul>
+<p>部分代码示例:<br>当前控制器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">//判断是否登录 登录了直接进 没登录引导登录并登录成功后直接跳到对应业务</span><br><span class="line">//</span><br><span class="line">if (APPLICATION.isLogin == YES) &#123;</span><br><span class="line">    [self jumpToZhuanZhang];</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    //</span><br><span class="line">    //先移除本通知，原因是：点击一个功能跳到登录界面，但是在登录界面点的取消，反复操作，再点这个功能，</span><br><span class="line">    //相同的通知会增加多次，登陆成功后会多次进入相应的功能</span><br><span class="line">    //</span><br><span class="line">    APPLICATION.jumpType = ZHUANZHANG_HOME_LOGIN;</span><br><span class="line">    [[NSNotificationCenter defaultCenter] removeObserver:self name:@&quot;LOGIN_ZZ&quot; object:nil] ;</span><br><span class="line">    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jumpToZhuanZhang) name:@&quot;LOGIN_ZZ&quot; object:nil];</span><br><span class="line">    LoginViewController *loginVC = [[LoginViewController alloc]init];</span><br><span class="line">    [self.navigationController presentViewController:loginVC animated:YES completion:^&#123;&#125;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>登录成功：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">- (IBAction)loginBtnClicked:(id)sender &#123;</span><br><span class="line">    </span><br><span class="line">    if (self.userName.text.length &gt; 0 &amp;&amp; self.passWord.text.length &gt; 0) &#123;</span><br><span class="line">        APPLICATION.isLogin = YES;</span><br><span class="line">        </span><br><span class="line">        [self dismissViewControllerAnimated:YES completion:^&#123;</span><br><span class="line">            if(APPLICATION.jumpType == ZHUANZHANG_HOME_LOGIN)&#123;</span><br><span class="line">                [[NSNotificationCenter defaultCenter] postNotificationName:@&quot;LOGIN_ZZ&quot; object:nil ];</span><br><span class="line">            &#125;else if (APPLICATION.jumpType == HUIKUAN_HOME_LOGIN)&#123;</span><br><span class="line">                [[NSNotificationCenter defaultCenter] postNotificationName:@&quot;LOGIN_HK&quot; object:nil ];</span><br><span class="line">            &#125;else if (APPLICATION.jumpType == JIEKUAN_HOME_LOGIN)&#123;</span><br><span class="line">                [[NSNotificationCenter defaultCenter] postNotificationName:@&quot;LOGIN_JK&quot; object:nil ];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@&quot;提示&quot; message:@&quot;输入有误&quot; delegate:nil cancelButtonTitle:@&quot;确定&quot; otherButtonTitles:nil, nil];</span><br><span class="line">        [alertView show];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月10日 13:57</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/10/PHP/登录成功后跳转上一次点击的页面/" title="登录成功后跳转上一次点击的页面">https://jqhee.github.io/2018/07/10/PHP/登录成功后跳转上一次点击的页面/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/objective-C/" class="color2">objective-C</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#登录成功后跳转上一次点击的页面"><span class="post-toc-text">登录成功后跳转上一次点击的页面</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/09/PHP/UICollectionViewCell自适应大小/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">UICollectionViewCell自适应大小</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 hjq<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://jqhee.github.io",
+      animate: false,
+      isHome: false,
+      share: false,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/PHP/">PHP</a><a class="category-link" href="/categories/Swift/">Swift</a><a class="category-link" href="/categories/objective-C/">objective-C</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a> <a href="/tags/objective-C/" style="font-size: 10px;">objective-C</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>首页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a> <a href="/tags/objective-C/" style="font-size: 10px;">objective-C</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
