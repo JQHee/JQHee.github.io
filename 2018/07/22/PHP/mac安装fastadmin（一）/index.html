@@ -3,18 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: objective-C | 只非鱼</title>
+  <title>mac 下安装fastadmin | 只非鱼</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="只非鱼,hjq,只非鱼博客" />
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="只非鱼">
-<meta property="og:url" content="https://jqhee.github.io/categories/objective-C/index.html">
+  <meta name="description" content="1.安装方式通过终端命令安装：  1.克隆FastAdmin到你本地git clone https://gitee.com/karson/fastadmin.git  进入目录 cd fastadmin    下载前端插件依赖包    bower install    下载PHP依赖包composer install    一键创建数据库并导入数据php think install -u 数据库用">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac 下安装fastadmin">
+<meta property="og:url" content="https://jqhee.github.io/2018/07/22/PHP/mac安装fastadmin（一）/index.html">
 <meta property="og:site_name" content="只非鱼">
+<meta property="og:description" content="1.安装方式通过终端命令安装：  1.克隆FastAdmin到你本地git clone https://gitee.com/karson/fastadmin.git  进入目录 cd fastadmin    下载前端插件依赖包    bower install    下载PHP依赖包composer install    一键创建数据库并导入数据php think install -u 数据库用">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-23T07:20:40.470Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="只非鱼">
+<meta name="twitter:title" content="mac 下安装fastadmin">
+<meta name="twitter:description" content="1.安装方式通过终端命令安装：  1.克隆FastAdmin到你本地git clone https://gitee.com/karson/fastadmin.git  进入目录 cd fastadmin    下载前端插件依赖包    bower install    下载PHP依赖包composer install    一键创建数据库并导入数据php think install -u 数据库用">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -97,53 +102,131 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap">
-  
-  
+        <section id="main" class="body-wrap"><article id="post-PHP/mac安装fastadmin（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/07/10/PHP/登录成功后跳转上一次点击的页面/" class="archive-article-date">
-  <time datetime="2018-07-09T16:00:00.000Z" itemprop="datePublished">07-10</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/10/PHP/登录成功后跳转上一次点击的页面/"  >登录成功后跳转上一次点击的页面</a>
+    <h1 class="post-title" itemprop="name">
+      mac 下安装fastadmin
     </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/PHP/">PHP</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-22
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
   
 
-    </header>
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
       
-        <div class="archive-post-footer">
+            
+            <h4 id="1-安装方式"><a href="#1-安装方式" class="headerlink" title="1.安装方式"></a>1.安装方式</h4><p>通过终端命令安装：</p>
+<ul>
+<li>1.克隆FastAdmin到你本地<code>git clone https://gitee.com/karson/fastadmin.git</code></li>
+<li><ol start="2">
+<li>进入目录 <code>cd fastadmin</code></li>
+</ol>
+</li>
+<li><ol start="3">
+<li>下载前端插件依赖包    <code>bower install</code></li>
+</ol>
+</li>
+<li><ol start="4">
+<li>下载PHP依赖包<code>composer install</code></li>
+</ol>
+</li>
+<li><ol start="5">
+<li>一键创建数据库并导入数据<code>php think install -u 数据库用户名 -p 数据库密码</code></li>
+</ol>
+</li>
+<li><ol start="6">
+<li>添加虚拟主机并绑定到<code>fastadmin/public</code>目录</li>
+</ol>
+</li>
+</ul>
+<p>补充：</p>
+<ul>
+<li>1.安装<code>bower</code></li>
+<li>2.安装<code>composer</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">全局安装：curl -sS https://getcomposer.org/installer | php</span><br><span class="line">mv composer.phar /usr/local/bin/composer</span><br><span class="line">更换成国内镜像：composer config -g repo.packagist composer https://packagist.phpcomposer.com</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月23日 15:20</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/22/PHP/mac安装fastadmin（一）/" title="mac 下安装fastadmin">https://jqhee.github.io/2018/07/22/PHP/mac安装fastadmin（一）/</a></p>
+        <footer>
+            <a href="https://jqhee.github.io">
+                <img src="/images/logo.png" alt="hjq">
+                hjq
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/objective-C/" class="color2">objective-C</a>
+    <a href="/tags/PHP/" class="color4">PHP</a>
       
   </li>
 
-        </div>
-      
+        </ul>
+        
+    </footer>
   </div>
 </article>
 
-  
-  
-    </div></section>
-  
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-安装方式"><span class="post-toc-text">1.安装方式</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/10/iOS/登录成功后跳转上一次点击的页面/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">登录成功后跳转上一次点击的页面</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
 </section>
         
       </div>
@@ -197,7 +280,7 @@
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/PHP/">PHP</a><a class="category-link" href="/categories/Swift/">Swift</a><a class="category-link" href="/categories/objective-C/">objective-C</a>
+            <a class="category-link" href="/categories/PHP/">PHP</a><a class="category-link" href="/categories/iOS/">iOS</a>
         </div>
         <div id="sidebar-menu-box-tags">
             <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/api接口开发/" style="font-size: 10px;">api接口开发</a> <a href="/tags/objective-C/" style="font-size: 10px;">objective-C</a>
